@@ -14,3 +14,4 @@ test*
 Library/
 bash-on-windows/
 plain-text/
+.wakatime*
