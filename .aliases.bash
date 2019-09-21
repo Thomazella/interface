@@ -49,12 +49,12 @@ alias cleoskylin="cleos -u http://kylin.fn.eosbixin.com"
 alias emulator="\$HOME/Library/Android/sdk/emulator/emulator"
 alias find="gfind"
 ################
-#-------cd stuff
+#-------. stuff
 ################
 alias .d="cd \$HOME/Desktop"
 alias .c="cd \$HOME/Code"
-alias .m="cd \$HOME/Documents/GoogleDrive/Mackup"
-alias .b="cd \$HOME/bin"
+alias .o="open ."
+alias .i="cd \$HOME/Documents/GoogleDrive/Mackup"
 ####################
 #--------mac aliases
 ####################
