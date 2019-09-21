@@ -12,7 +12,6 @@ test*
 !.vscode*
 !.git*
 !.mackup*
-!.npm*
 !.zsh*
 !.inputrc
 !.hyper*
@@ -21,6 +20,4 @@ test*
 .git-completion.bash
 !Library/
 !bash-on-linux/
-!bash-on-windows/
 !plain-text/
-!.npmrc
