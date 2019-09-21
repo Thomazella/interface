@@ -14,3 +14,4 @@ osascript -e 'quit app "Preview"'
 osascript -e 'quit app "Android Studio"'
 osascript -e 'quit app "Figma"'
 osascript -e 'quit app "Notes"'
+echo "done"
