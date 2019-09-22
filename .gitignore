@@ -12,6 +12,6 @@ test*
 .ssh/
 .subversion/
 Library/
-bash-on-windows/
+bash-on-*
 plain-text/
 .wakatime*
