@@ -48,6 +48,10 @@ alias his='hub issue'
 alias cleoskylin="cleos -u http://kylin.fn.eosbixin.com"
 alias emulator="\$HOME/Library/Android/sdk/emulator/emulator"
 alias find="gfind"
+alias tnet="pbcopy <<< 5JTkTqynpCXT98rhoFG4ByTLrXKVK9bC9vnHuKeLVLwZQArURUF"
+alias tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
+alias mnet="pbcopy <<< 5JqqapmeXEb97gpT6zJVZ4U2EcSacQBtJjwsKTjXbgL1q7guc35"
+alias mnet2="pbcopy <<< 5K3Q42FUKfywmYtPJTp9WNrzzELiCHE2vozHeKjv8791h8cjrfy"
 ################
 #-------. stuff
 ################
