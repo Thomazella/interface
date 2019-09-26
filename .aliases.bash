@@ -48,10 +48,11 @@ alias his='hub issue'
 alias cleoskylin="cleos -u http://kylin.fn.eosbixin.com"
 alias emulator="\$HOME/Library/Android/sdk/emulator/emulator"
 alias find="gfind"
-alias tnet="pbcopy <<< 5JTkTqynpCXT98rhoFG4ByTLrXKVK9bC9vnHuKeLVLwZQArURUF"
-alias tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
-alias mnet="pbcopy <<< 5JqqapmeXEb97gpT6zJVZ4U2EcSacQBtJjwsKTjXbgL1q7guc35"
-alias mnet2="pbcopy <<< 5K3Q42FUKfywmYtPJTp9WNrzzELiCHE2vozHeKjv8791h8cjrfy"
+alias c.tnet="pbcopy <<< 5JTkTqynpCXT98rhoFG4ByTLrXKVK9bC9vnHuKeLVLwZQArURUF"
+alias c.tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
+alias c.mnet="pbcopy <<< 5JqqapmeXEb97gpT6zJVZ4U2EcSacQBtJjwsKTjXbgL1q7guc35"
+alias c.mnet2="pbcopy <<< 5K3Q42FUKfywmYtPJTp9WNrzzELiCHE2vozHeKjv8791h8cjrfy"
+alias c.cmail="pbcopy <<< oswald_ernser97@yahoo.com"
 ################
 #-------. stuff
 ################
@@ -66,8 +67,8 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   #on mac use gnu ls. BSD ls: ls -Gph
   alias ls='gls -ph --color=always'
   alias rn='react-native'
-  alias rns='nvm use lts/* && react-native start'
-  alias rnsr='nvm use lts/* && react-native start --reset-cache'
+  alias rns='nvm use lts/\* && react-native start'
+  alias rnsr='nvm use lts/\* && react-native start --reset-cache'
 else
   alias ls='ls -ph --color=always'
 fi
