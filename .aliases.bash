@@ -53,12 +53,14 @@ alias c.tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
 alias c.mnet="pbcopy <<< 5JqqapmeXEb97gpT6zJVZ4U2EcSacQBtJjwsKTjXbgL1q7guc35"
 alias c.mnet2="pbcopy <<< 5K3Q42FUKfywmYtPJTp9WNrzzELiCHE2vozHeKjv8791h8cjrfy"
 alias c.cmail="pbcopy <<< oswald_ernser97@yahoo.com"
+alias c.cmail2="pbcopy <<< reuben90@gmail.com"
 ################
 #-------. stuff
 ################
 alias .d="cd \$HOME/Desktop"
 alias .c="cd \$HOME/Code"
 alias .o="open ."
+alias o="open"
 alias .i="cd \$HOME/Documents/GoogleDrive/Mackup"
 ####################
 #--------mac aliases
