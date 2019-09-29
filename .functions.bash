@@ -211,8 +211,14 @@ findname() {
     precho 'run find here ./ case-insensitive and glob around args'
     return
   fi
+  local where=.
+  local pattern="$1"
+  if [ $# == "2" ]; then
+    where="$1"
+    pattern="$2"
+  fi
   # shellcheck disable=SC2185
-  find -Hx . -iname "*$1*"
+  find "$where" -iname "*$pattern*"
 }
 
 #- - - - - - - - - - -
@@ -589,6 +595,10 @@ lg() {
   else
     git commit -q -v
   fi
+
+  if [[ ! origin/develop =~ $GIT_UPSTREAM ]] && [[ ! origin/master =~ $GIT_UPSTREAM ]] && [[ ! -1 =~ $GIT_BRANCH ]]; then
+    gp
+  fi
 }
 
 #- - - - - - - - - - -
@@ -602,14 +612,6 @@ gcmsg() {
   else
     git commit -q -v
   fi
-}
-
-#- - - - - - - - - - -
-
-#lazy git with push
-lp() {
-  lg "$@"
-  iflast git push -q
 }
 
 #- - - - - - - - - - -
