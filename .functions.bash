@@ -596,7 +596,7 @@ lg() {
     git commit -q -v
   fi
 
-  if [[ ! origin/develop =~ $GIT_UPSTREAM ]] && [[ ! origin/master =~ $GIT_UPSTREAM ]] && [[ ! -1 =~ $GIT_BRANCH ]]; then
+  if [[ ! origin/develop =~ $GIT_UPSTREAM ]] && [[ ! origin/master =~ $GIT_UPSTREAM ]] && [[ ! -1 =~ $GIT_BRANCH ]] && [[ ! $DONTPUSH ]]; then
     gp
   fi
 }
