@@ -37,8 +37,8 @@ alias visudo="EDITOR=emacs && sudo visudo"
 alias shfmt="shfmt -i 2 -ln bash"
 alias shellcheck="shellcheck --color=auto -s bash"
 alias cat='bat --theme Monokai\ Extended\ Origin'
-alias gppr='gpsup && hub pull-request --browse'
-alias gpprd='gpsup && hub pull-request --base develop --browse'
+alias gppr='gpsup && hub pull-request -b origin/master --browse --assign thomazella'
+alias gpprd='gpsup && hub pull-request -b origin/develop --browse --assign thomazella'
 alias hpr='hub pull-request'
 alias hprl='hub pr list'
 alias hprc='hub pr checkout'
