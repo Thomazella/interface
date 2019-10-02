@@ -561,9 +561,10 @@ lg() {
   local type=""
 
   # git add --all, if fail exit
-  if ! git add --all; then
+  if [ ! "$SKIPADD" ] && ! git add --all; then
     return 1
   fi
+  unset SKIPADD
 
   if [ "$args" ]; then
     # check if first arg is a commit type

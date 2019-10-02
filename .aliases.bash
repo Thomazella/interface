@@ -37,8 +37,8 @@ alias visudo="EDITOR=emacs && sudo visudo"
 alias shfmt="shfmt -i 2 -ln bash"
 alias shellcheck="shellcheck --color=auto -s bash"
 alias cat='bat --theme Monokai\ Extended\ Origin'
-alias gppr='gpsup && hub pull-request -b origin/master --browse --assign thomazella'
-alias gpprd='gpsup && hub pull-request -b origin/develop --browse --assign thomazella'
+alias gppr='gpsup && hub pull-request -b master --browse --assign thomazella'
+alias gpprd='gpsup && hub pull-request -b develop --browse --assign thomazella'
 alias hpr='hub pull-request'
 alias hprl='hub pr list'
 alias hprc='hub pr checkout'
@@ -53,6 +53,7 @@ alias c.tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
 alias c.mnet="pbcopy <<< 5JqqapmeXEb97gpT6zJVZ4U2EcSacQBtJjwsKTjXbgL1q7guc35"
 alias c.mnet2="pbcopy <<< 5K3Q42FUKfywmYtPJTp9WNrzzELiCHE2vozHeKjv8791h8cjrfy"
 alias c.cmail="pbcopy <<< oswald_ernser97@yahoo.com"
+alias c.cowner-mail="pbcopy <<< owner11@fotontech.io"
 alias c.cmail2="pbcopy <<< reuben90@gmail.com"
 ################
 #-------. stuff
