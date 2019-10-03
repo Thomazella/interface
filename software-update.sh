@@ -25,6 +25,10 @@ work() {
   eval npm -g i caniuse "$silently"
   [ "$silently" ] && progress finish "$?"
 
+  [ "$silently" ] && progress start "Updating yarn global packages"
+  eval yarn global upgrade --latest "$silently"
+  [ "$silently" ] && progress finish "$?"
+
   [ "$silently" ] && progress start "Updating gems"
   # /usr/bin/gem often conflicts. MacOS version is root - wheel, no write perm.
   eval "setsid -w yes | /usr/local/opt/ruby/bin/gem update $silently" || true
