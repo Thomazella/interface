@@ -31,5 +31,5 @@ listVscodeExtensions
 # copyZipping
 updateSoftware
 updateBrewfile
-runMackup
+# runMackup
 finish-run
