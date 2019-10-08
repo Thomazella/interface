@@ -831,4 +831,23 @@ hisl() {
   eval "$command"
 }
 
+# sense tasks
+stask() {
+  if [ "$#" == 0 ]; then
+    cat "$HOME/tasks.txt"
+    return
+  fi
+  if [ "$1" == "clean" ]; then
+    echo >"$HOME/tasks.txt"
+    return
+  fi
+  for name in "$@"; do
+    if [[ "$name" =~ [0-9]{3,4} ]]; then
+      echo "https://github.com/makesense/sense-chat-mobile/issues/${name}" >>"$HOME/tasks.txt"
+    else
+      echo "${name}" >>"$HOME/tasks.txt"
+    fi
+  done
+}
+
 #='hub issue -l '
