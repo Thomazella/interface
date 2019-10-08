@@ -841,6 +841,10 @@ stask() {
     echo >"$HOME/tasks.txt"
     return
   fi
+  if [ "$1" == "copy" ]; then
+    pbcopy <"$HOME/tasks.txt"
+    return
+  fi
   for name in "$@"; do
     if [[ "$name" =~ [0-9]{3,4} ]]; then
       echo "https://github.com/makesense/sense-chat-mobile/issues/${name}" >>"$HOME/tasks.txt"
