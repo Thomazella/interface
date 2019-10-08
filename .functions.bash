@@ -854,4 +854,14 @@ stask() {
   done
 }
 
+hidedesktop() {
+  local state && state=$(defaults read com.apple.finder CreateDesktop)
+  if [ "$state" == "true" ]; then
+    defaults write com.apple.finder CreateDesktop false
+  else
+    defaults write com.apple.finder CreateDesktop true
+  fi
+  killall Finder
+}
+
 #='hub issue -l '
