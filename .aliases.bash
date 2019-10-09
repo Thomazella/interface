@@ -60,7 +60,7 @@ alias c.cmail2="pbcopy <<< reuben90@gmail.com"
 ################
 alias .d="cd \$HOME/Desktop"
 alias .c="cd \$HOME/Code"
-alias .o="open ."
+alias o.="open ."
 alias o="open"
 alias .i="cd \$HOME/Documents/GoogleDrive/Mackup"
 ####################
