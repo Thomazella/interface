@@ -13,14 +13,19 @@ cl() {
 #- - - - - - - - - - -
 
 chpwd() {
-  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense})
+  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
 
+  # procure
   if [ "$PWD" == "${ledirs[1]}" ]; then
     source ".env"
   fi
-  if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ]; then
+  # confy sense interface
+  if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ] || [ "$PWD" == "${ledirs[4]}" ]; then
     source ".vscode/vars"
   fi
+  ###########
+  # cleanup #
+  ###########
   # procure
   if [ "$OLDPWD" == "${ledirs[1]}" ]; then
     source "${ledirs[1]}/.vscode/cleanup"
@@ -32,6 +37,10 @@ chpwd() {
   # sense
   if [ "$OLDPWD" == "${ledirs[3]}" ]; then
     source "${ledirs[3]}/.vscode/cleanup"
+  fi
+  # interface
+  if [ "$OLDPWD" == "${ledirs[4]}" ]; then
+    source "${ledirs[4]}/.vscode/cleanup"
   fi
 }
 
