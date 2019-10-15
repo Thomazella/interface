@@ -13,14 +13,25 @@ cl() {
 #- - - - - - - - - - -
 
 chpwd() {
-  if [ "$PWD" == "/Users/vamac/Desktop/procure" ]; then
+  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense})
+
+  if [ "$PWD" == "${ledirs[1]}" ]; then
     source ".env"
   fi
-  if [ "$PWD" == "/Users/vamac/Desktop/confy" ]; then
+  if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ]; then
     source ".vscode/vars"
   fi
-  if [ "$OLDPWD" == "/Users/vamac/Desktop/confy" ]; then
+  # procure
+  if [ "$OLDPWD" == "${ledirs[1]}" ]; then
+    source "${ledirs[1]}/.vscode/cleanup"
+  fi
+  # confy
+  if [ "$OLDPWD" == "${ledirs[2]}" ]; then
     unset MILESTONE
+  fi
+  # sense
+  if [ "$OLDPWD" == "${ledirs[3]}" ]; then
+    source "${ledirs[3]}/.vscode/cleanup"
   fi
 }
 

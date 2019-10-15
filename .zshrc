@@ -58,7 +58,7 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
 
   # fix compinit path pointing to old version (auto pruned from brew on update)
   # before nvm!
-  CURRENT=$(find /usr/local/Cellar/zsh -depth 1 -type d | sed -e 's/.\///')
+  CURRENT=$(/usr/bin/find /usr/local/Cellar/zsh -depth 1 -type d | sed -e 's/.\///')
   export FPATH=${FPATH/5.6.2_1/$CURRENT}
 
   # Mono for subnautica
