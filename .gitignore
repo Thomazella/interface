@@ -16,3 +16,4 @@ bash-on-*
 plain-text/
 .wakatime*
 .vscode
+.private.bash

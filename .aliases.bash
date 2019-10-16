@@ -48,13 +48,6 @@ alias his='hub issue'
 alias cleoskylin="cleos -u http://kylin.fn.eosbixin.com"
 alias emulator="\$HOME/Library/Android/sdk/emulator/emulator"
 alias find="gfind"
-alias c.tnet="pbcopy <<< 5JTkTqynpCXT98rhoFG4ByTLrXKVK9bC9vnHuKeLVLwZQArURUF"
-alias c.tnet2="pbcopy <<< 5KjZibqKpXwU4ZsfmFbqtgwnxhRjWLv9P2jKZ1FMJtW2HcZi3s6"
-alias c.mnet="pbcopy <<< 5JiyAxFBh46jcomdt6cEGBrm6FyQwjD6u5wRT82FJsKaT6ZH5Hk"
-alias c.mnet2="pbcopy <<< 5Jry2DnMQJtu19H6ZkLGj4Y8uGfD3RgvxXqkSA94SJpSA6GTkVS"
-alias c.cmail="pbcopy <<< oswald_ernser97@yahoo.com"
-alias c.cowner-mail="pbcopy <<< owner11@fotontech.io"
-alias c.cmail2="pbcopy <<< reuben90@gmail.com"
 ################
 #-------. stuff
 ################

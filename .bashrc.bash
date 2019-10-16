@@ -77,5 +77,6 @@ shopt -s autocd cdspell dirspell globstar cmdhist lithist histverify histappend 
 
 #========== Late sourcing
 dosource ".aliases.bash"
+dosource ".private.bash"
 dosource ".functions.bash"
 dosource "$VSCODE_OVERRIDES"
