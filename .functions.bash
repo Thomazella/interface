@@ -897,4 +897,6 @@ hidedesktop() {
   killall Finder
 }
 
-#='hub issue -l '
+kylin(){
+  open "https://kylin.eosx.io/account/$1"
+}
