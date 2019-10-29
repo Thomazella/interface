@@ -13,8 +13,12 @@ cl() {
 #- - - - - - - - - - -
 
 chpwd() {
-  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
+  if [ "$0" == "bash" ]; then
+    # array in bash is 0 indexed and zsh 1 indexed
+    return
+  fi
 
+  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
   # procure
   if [ "$PWD" == "${ledirs[1]}" ]; then
     source ".env"
@@ -30,6 +34,7 @@ chpwd() {
   if [ "$OLDPWD" == "${ledirs[1]}" ]; then
     source "${ledirs[1]}/.vscode/cleanup"
   fi
+  echo confy "${ledirs[2]}"
   # confy
   if [ "$OLDPWD" == "${ledirs[2]}" ]; then
     unset MILESTONE
@@ -43,6 +48,10 @@ chpwd() {
     source "${ledirs[4]}/.vscode/cleanup"
   fi
 }
+if [ "$0" == "zsh" ]; then
+  OLDPWD=''
+  chpwd # call it to check initial dir in new shell
+fi
 
 #- - - - - - - - - - -
 
@@ -633,6 +642,7 @@ lg() {
   if [ $shouldPush == 'true' ]; then
     gp
   fi
+  gss
 }
 
 #- - - - - - - - - - -
@@ -646,6 +656,7 @@ gcmsg() {
   else
     git commit -q -v
   fi
+  gss
 }
 
 #- - - - - - - - - - -
@@ -897,6 +908,6 @@ hidedesktop() {
   killall Finder
 }
 
-kylin(){
+kylin() {
   open "https://kylin.eosx.io/account/$1"
 }

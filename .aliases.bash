@@ -121,8 +121,8 @@ alias .....="cl ../../../../"
 alias ......="cl ../../../../../"
 alias git="hub"
 # alias g=git
-alias ga='git add'
-alias gaa='git add --all'
+alias ga='git add && gss'
+alias gaa='git add --all && gss'
 alias gapp='git apply'
 alias gap='git add --patch'
 alias gau='git add --update'
@@ -146,7 +146,7 @@ alias gcb='git checkout -b'
 alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
-alias gclean='git clean -fd'
+alias gclean='git clean -fd && gss'
 # alias gcmsg='git commit -m' using function
 alias gco='git checkout'
 alias gcom='git fetch --all --prune && git checkout master'
@@ -225,8 +225,8 @@ alias grbi='git rebase -i'
 alias grbm='git rebase master'
 alias grbs='git rebase --skip'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
-alias grh='git reset HEAD'
-alias grhh='git reset HEAD --hard'
+alias grh='git reset HEAD && gss'
+alias grhh='git reset HEAD --hard && gss'
 alias grh1="git reset HEAD~1"
 alias grh2="git reset HEAD~2"
 alias grh3="git reset HEAD~3"
@@ -246,13 +246,22 @@ alias gsi='git submodule init'
 alias gsps='git show --pretty=short --show-signature'
 alias gsr='git svn rebase'
 alias gss='git status -s'
+alias gsss='git status -s'
+alias gssss='git status -s'
+alias gsssss='git status -s'
+alias gssssss='git status -s'
+alias gsssssss='git status -s'
+alias gssssssss='git status -s'
+alias gsssssssss='git status -s'
+alias gssssssssss='git status -s'
+alias gssssssssssss='git status -s'
 alias gst='git status'
-alias gsta='git stash push'
+alias gsta='git stash push && gss'
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
 alias gstd='git stash drop'
 alias gstl='git stash list'
-alias gstp='git stash pop'
+alias gstp='git stash pop && gss'
 alias gsts='git stash show --text'
 alias gsu='git submodule update'
 alias gtl='git tag -l'
@@ -268,6 +277,7 @@ alias grev='git revert'
 alias gnuke='git reset HEAD --hard && git clean -fd'
 alias wip="git add --all && git commit -nm wip"
 alias grl="git reflog"
+alias lgs="SKIPADD=1 && lg"
 ###################
 #------------dev
 ###################
