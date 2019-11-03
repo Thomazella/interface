@@ -12,46 +12,81 @@ cl() {
 
 #- - - - - - - - - - -
 
-chpwd() {
-  if [ "$0" == "bash" ]; then
-    # array in bash is 0 indexed and zsh 1 indexed
-    return
-  fi
+# __chpwd() {
+#   if [ "$0" == "bash" ]; then
+#     # array in bash is 0 indexed and zsh 1 indexed
+#     return
+#   fi
+#   local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
+#   # procure
+#   if [ "$PWD" == "${ledirs[1]}" ]; then
+#     source ".env"
+#   fi
+#   # confy sense interface
+#   if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ] || [ "$PWD" == "${ledirs[4]}" ]; then
+#     source ".vscode/vars"
+#   fi
+#   ###########
+#   # cleanup #
+#   ###########
+#   # procure
+#   if [ "$OLDPWD" == "${ledirs[1]}" ]; then
+#     source "${ledirs[1]}/.vscode/cleanup"
+#   fi
+#   echo confy "${ledirs[2]}"
+#   # confy
+#   if [ "$OLDPWD" == "${ledirs[2]}" ]; then
+#     unset MILESTONE
+#   fi
+#   # sense
+#   if [ "$OLDPWD" == "${ledirs[3]}" ]; then
+#     source "${ledirs[3]}/.vscode/cleanup"
+#   fi
+#   # interface
+#   if [ "$OLDPWD" == "${ledirs[4]}" ]; then
+#     source "${ledirs[4]}/.vscode/cleanup"
+#   fi
+# }
+# if [ "$0" == "zsh" ]; then
+#   OLDPWD=''
+#   chpwd # call it to check initial dir in new shell
+# fi
 
-  local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
-  # procure
-  if [ "$PWD" == "${ledirs[1]}" ]; then
+#- - - - - - - - - - -
+
+chpwd() {
+  case $PWD in
+  /Users/vamac/Desktop/procure)
     source ".env"
-  fi
-  # confy sense interface
-  if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ] || [ "$PWD" == "${ledirs[4]}" ]; then
-    source ".vscode/vars"
-  fi
-  ###########
-  # cleanup #
-  ###########
-  # procure
-  if [ "$OLDPWD" == "${ledirs[1]}" ]; then
-    source "${ledirs[1]}/.vscode/cleanup"
-  fi
-  echo confy "${ledirs[2]}"
-  # confy
-  if [ "$OLDPWD" == "${ledirs[2]}" ]; then
-    unset MILESTONE
-  fi
-  # sense
-  if [ "$OLDPWD" == "${ledirs[3]}" ]; then
-    source "${ledirs[3]}/.vscode/cleanup"
-  fi
-  # interface
-  if [ "$OLDPWD" == "${ledirs[4]}" ]; then
-    source "${ledirs[4]}/.vscode/cleanup"
-  fi
+    ;;
+  /Users/vamac/Desktop/confy)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-enter-dir"
+    ;;
+  /Users/vamac/Desktop/sense)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-enter-dir"
+    ;;
+  /Users/vamac/Desktop/interface)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-enter-dir"
+    ;;
+  *) ;;
+  esac
+
+  case $OLDPWD in
+  /Users/vamac/Desktop/procure)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/procure/on-leave-dir"
+    ;;
+  /Users/vamac/Desktop/confy)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-leave-dir"
+    ;;
+  /Users/vamac/Desktop/sense)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-leave-dir"
+    ;;
+  /Users/vamac/Desktop/interface)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-leave-dir"
+    ;;
+  *) ;;
+  esac
 }
-if [ "$0" == "zsh" ]; then
-  OLDPWD=''
-  chpwd # call it to check initial dir in new shell
-fi
 
 #- - - - - - - - - - -
 
