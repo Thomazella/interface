@@ -45,6 +45,10 @@ case "$1" in
   work silently || progress finish "$?"
   exit 0
   ;;
+-v | --verbose)
+  work
+  exit 0
+  ;;
 esac
 
 #confirm upgrade

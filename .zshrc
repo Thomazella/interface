@@ -95,6 +95,7 @@ GPG_TTY=$(tty) && export GPG_TTY
 #========== Late sourcing
 source $HOME/.aliases.bash
 source $HOME/.functions.bash
+source $HOME/Documents/GoogleDrive/Mackup/.private.bash
 # dosource "$VSCODE_OVERRIDES"
 # eval "$(direnv hook zsh)"
 
