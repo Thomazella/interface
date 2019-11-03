@@ -56,32 +56,32 @@ cl() {
 
 chpwd() {
   case $PWD in
-  /Users/vamac/Desktop/procure)
+  $HOME/Desktop/procure)
     source ".env"
     ;;
-  /Users/vamac/Desktop/confy)
+  $HOME/Desktop/confy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-enter-dir"
     ;;
-  /Users/vamac/Desktop/sense)
+  $HOME/Desktop/sense)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-enter-dir"
     ;;
-  /Users/vamac/Desktop/interface)
+  $HOME/Documents/GoogleDrive/Mackup)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-enter-dir"
     ;;
   *) ;;
   esac
 
   case $OLDPWD in
-  /Users/vamac/Desktop/procure)
+  $HOME/Desktop/procure)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/procure/on-leave-dir"
     ;;
-  /Users/vamac/Desktop/confy)
+  $HOME/Desktop/confy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-leave-dir"
     ;;
-  /Users/vamac/Desktop/sense)
+  $HOME/Desktop/sense)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-leave-dir"
     ;;
-  /Users/vamac/Desktop/interface)
+  $HOME/Documents/GoogleDrive/Mackup)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-leave-dir"
     ;;
   *) ;;
