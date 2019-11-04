@@ -71,6 +71,7 @@ brew "unrar"
 brew "util-linux"
 brew "xmlto"
 brew "yarn"
+brew "zeromq"
 brew "zsh"
 brew "zsh-completions"
 brew "eosio/eosio/eosio"
@@ -124,3 +125,4 @@ cask "vlc"
 cask "vuze"
 cask "xquartz"
 mas "Disk Speed Test", id: 425264550
+mas "Howler Timer", id: 428846772
