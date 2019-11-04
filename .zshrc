@@ -47,9 +47,9 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   export GOPATH="$HOME/.go"
   LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
 
-  #compiler flags
-  export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib"
-  export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/libxslt/include -I/usr/local/opt/openssl/include"
+  # compiler flags
+  export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/krb5/lib"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/libxslt/include -I/usr/local/opt/openssl/include -I/usr/local/opt/krb5/include"
 
   # android SDK
   # gradle needs this to find SDK. Opening android studio once fixes.
@@ -74,11 +74,11 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   # ZSH
   PROMPT_SUBST="true"
 
-  # elixir
+  # elixir/erlang with asdf
   export ERL_AFLAGS="-kernel shell_history enabled"
   source /usr/local/opt/asdf/asdf.sh
-  export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig" # used by asdf plugins
-  export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+  export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
+  export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
 
   if [ -f $HOME/.prompt.zsh ]; then
     source $HOME/.prompt.zsh

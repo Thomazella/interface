@@ -4,13 +4,13 @@
 # Most important helper for init files
 # Paths are sourced relative to HOMES array
 dosource() {
-    [ "$#" == 0 ] && return 1
+  [ "$#" == 0 ] && return 1
 
-    [ -f "${HOMES[0]}/$1" ] && source "${HOMES[0]}/$1"
-    [ -f "${HOMES[1]}/$1" ] && source "${HOMES[1]}/$1"
+  [ -f "${HOMES[0]}/$1" ] && source "${HOMES[0]}/$1"
+  [ -f "${HOMES[1]}/$1" ] && source "${HOMES[1]}/$1"
 }
 
-HOMES=( /Users/vamac "\\$HOME")
+HOMES=(/Users/vamac "\\$HOME")
 
 #it's recommended by a man page to set this here for better compatibility I guess
 tput init
@@ -18,7 +18,7 @@ tput init
 #========== Completions, external scripts, git prompt
 # Early sourcing
 for file in /usr/local/etc/bash_completion.d/*; do
-    source "$file"
+  source "$file"
 done
 dosource "Code/dBash/main.bash"
 dosource "Code/hue/main.bash"
@@ -37,29 +37,33 @@ GIT_PS1_SHOWCOLORHINTS="true"
 
 #========== Mac only
 if [[ "$(uname -s)" =~ Darwin ]]; then
-    # export PATH="/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/bin:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
-    export CDPATH=${HOMES[0]}:/Volumes:${HOMES[0]}/Desktop
-    # export EDITOR='code -w'
-    export GOPATH="${HOMES[0]}/.go"
-    LS_COLORS=$(cat "${HOMES[0]}/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
+  # export PATH="/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/bin:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+  export CDPATH=${HOMES[0]}:/Volumes:${HOMES[0]}/Desktop
+  # export EDITOR='code -w'
+  export GOPATH="${HOMES[0]}/.go"
+  LS_COLORS=$(cat "${HOMES[0]}/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
 
   # android SDK
   # gradle needs this to find SDK. Opening android studio once fixes.
   export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
   export ANDROID_HOME="$HOME/Library/Android/sdk"
 
-    # NVM
-    unset PREFIX            # NVM hates this
-    unset npm_config_prefix # NVM hates this
-    export NVM_DIR="${HOMES[0]}/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+  # NVM
+  unset PREFIX            # NVM hates this
+  unset npm_config_prefix # NVM hates this
+  export NVM_DIR="${HOMES[0]}/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-    if [ -f ~/.prompt.bash ]; then
-        source ~/.prompt.bash
-    else
-        export PS1="\\n\\w\\n\$ "
-    fi
+  # elixir
+  export ERL_AFLAGS="-kernel shell_history enabled"
+  source /usr/local/opt/asdf/asdf.sh
+
+  if [ -f ~/.prompt.bash ]; then
+    source ~/.prompt.bash
+  else
+    export PS1="\\n\\w\\n\$ "
+  fi
 fi
 
 #========== Environment
