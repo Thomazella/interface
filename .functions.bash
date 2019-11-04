@@ -71,6 +71,9 @@ chpwd() {
   $HOME/Desktop/elixir-backend-example)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-enter-dir"
     ;;
+  $HOME/Desktop/community)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-enter-dir"
+    ;;
   *) ;;
   esac
 
@@ -89,6 +92,9 @@ chpwd() {
     ;;
   $HOME/Desktop/elixir-backend-example)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-leave-dir"
+    ;;
+  $HOME/Desktop/community)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-leave-dir"
     ;;
   *) ;;
   esac
