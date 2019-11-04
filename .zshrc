@@ -40,16 +40,16 @@ GIT_PS1_SHOWCOLORHINTS="true"
 
 #========== Mac only
 if [[ "$(uname -s)" =~ Darwin ]]; then
-  export PATH="/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+  export PATH="$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
   export MANPATH="/usr/local/opt/erlang/lib/erlang/man:$MANPATH"
   export CDPATH=$HOME:/Volumes:$HOME/Desktop
   export EDITOR='code -w'
   export GOPATH="$HOME/.go"
   LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
 
-  #ruby flags
-  export LDFLAGS="-L/usr/local/opt/ruby/lib"
-  export CPPFLAGS="-I/usr/local/opt/ruby/include"
+  #compiler flags
+  export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/libxslt/include -I/usr/local/opt/openssl/include"
 
   # android SDK
   # gradle needs this to find SDK. Opening android studio once fixes.
@@ -76,6 +76,9 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
 
   # elixir
   export ERL_AFLAGS="-kernel shell_history enabled"
+  source /usr/local/opt/asdf/asdf.sh
+  export PKG_CONFIG_PATH="/usr/local/opt/libxslt/lib/pkgconfig" # used by asdf plugins
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
   if [ -f $HOME/.prompt.zsh ]; then
     source $HOME/.prompt.zsh
