@@ -56,7 +56,7 @@ brew "osxutils"
 brew "p7zip"
 brew "pandoc"
 brew "pkg-config"
-brew "postgresql"
+brew "postgresql", link: false
 brew "qemu"
 brew "rbenv"
 brew "redis", restart_service: true

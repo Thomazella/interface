@@ -12,48 +12,6 @@ cl() {
 
 #- - - - - - - - - - -
 
-# __chpwd() {
-#   if [ "$0" == "bash" ]; then
-#     # array in bash is 0 indexed and zsh 1 indexed
-#     return
-#   fi
-#   local ledirs=(/Users/vamac/Desktop/{procure,confy,sense} "$HOME/Documents/GoogleDrive/Mackup")
-#   # procure
-#   if [ "$PWD" == "${ledirs[1]}" ]; then
-#     source ".env"
-#   fi
-#   # confy sense interface
-#   if [ "$PWD" == "${ledirs[2]}" ] || [ "$PWD" == "${ledirs[3]}" ] || [ "$PWD" == "${ledirs[4]}" ]; then
-#     source ".vscode/vars"
-#   fi
-#   ###########
-#   # cleanup #
-#   ###########
-#   # procure
-#   if [ "$OLDPWD" == "${ledirs[1]}" ]; then
-#     source "${ledirs[1]}/.vscode/cleanup"
-#   fi
-#   echo confy "${ledirs[2]}"
-#   # confy
-#   if [ "$OLDPWD" == "${ledirs[2]}" ]; then
-#     unset MILESTONE
-#   fi
-#   # sense
-#   if [ "$OLDPWD" == "${ledirs[3]}" ]; then
-#     source "${ledirs[3]}/.vscode/cleanup"
-#   fi
-#   # interface
-#   if [ "$OLDPWD" == "${ledirs[4]}" ]; then
-#     source "${ledirs[4]}/.vscode/cleanup"
-#   fi
-# }
-# if [ "$0" == "zsh" ]; then
-#   OLDPWD=''
-#   chpwd # call it to check initial dir in new shell
-# fi
-
-#- - - - - - - - - - -
-
 chpwd() {
   case $PWD in
   $HOME/Desktop/procure)
@@ -73,6 +31,9 @@ chpwd() {
     ;;
   $HOME/Desktop/community)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-enter-dir"
+    ;;
+  $HOME/Desktop/oreid)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/oreid/on-enter-dir"
     ;;
   *) ;;
   esac
@@ -95,6 +56,9 @@ chpwd() {
     ;;
   $HOME/Desktop/community)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-leave-dir"
+    ;;
+  $HOME/Desktop/oreid)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/oreid/on-leave-dir"
     ;;
   *) ;;
   esac
