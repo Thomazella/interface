@@ -29,7 +29,9 @@ start-run
 listApps
 listVscodeExtensions
 # copyZipping
-updateSoftware
+software-update.sh -v
+# updateSoftware
 updateBrewfile
 # runMackup
 finish-run
+
