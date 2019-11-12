@@ -3,16 +3,15 @@
 set -e
 if [ -f "${HOME}/bin/progress.sh" ]; then source "$HOME/bin/progress.sh"; fi
 
-
 work() {
   [ "$1" == "silently" ] && local silently=">/dev/null 2>&1"
   set -e
 
   [ "$silently" ] && progress start "Upgrading homebrew"
   # || true because brew fails on pinned itens being upgraded...
-  eval setsid -w brew upgrade </dev/null "$silently" || true
-  set +e # clover configurator issues
-  eval setsid -w brew cask upgrade </dev/null "$silently"
+  eval setsid -w brew upgrade "$silently" </dev/null || true
+  set +e # several cask issues
+  eval setsid -w brew cask upgrade "$silently" </dev/null
   set -e
   [ "$silently" ] && progress finish "$?"
 
@@ -38,6 +37,21 @@ work() {
   [ "$silently" ] && progress start "Updating Node"
   eval "yes | nvm install node $silently"
   [ "$silently" ] && progress finish "$?"
+
+  [ "$silently" ] && progress start "Asdf plugin update"
+  eval "asdf plugin-update --all"
+  [ "$silently" ] && progress finish "$?"
+  #   $(node -e "
+  # result = $(curl -sH Authorization:\ token\ $GHAUTH https://api.github.com/repos/elixir-lang/elixir/releases)
+  # result = result.map(r => r.tag_name).slice(0,1)[0].replace('v','')
+  # console.log(result)
+  # ")
+
+  # node -e "
+  # result = $(curl -sH Authorization:\ token\ $GHAUTH https://api.github.com/repos/erlang/otp/releases)
+  # result = result.map(r => r.tag_name).map(x => x.replace(/OTP-|-rc[0-9]/g, '')).sort().reverse()
+  # console.log(result)
+  # "
 }
 
 case "$1" in
