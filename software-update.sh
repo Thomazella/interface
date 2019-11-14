@@ -49,7 +49,7 @@ work() {
 
   # node -e "
   # result = $(curl -sH Authorization:\ token\ $GHAUTH https://api.github.com/repos/erlang/otp/releases)
-  # result = result.map(r => r.tag_name).map(x => x.replace(/OTP-|-rc[0-9]/g, '')).sort().reverse()
+  # result = result.map(r => r.tag_name).map(x => x.replace(/OTP-|-rc[0-9]/g, '')).sort().reverse().slice(0,1)[0]
   # console.log(result)
   # "
 }
