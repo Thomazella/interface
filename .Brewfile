@@ -102,7 +102,6 @@ cask "iterm2"
 cask "java8"
 cask "jetbrains-toolbox"
 cask "kap"
-cask "key-codes"
 cask "phew"
 cask "postico"
 cask "postman"
@@ -116,4 +115,3 @@ cask "visual-studio-code"
 cask "vlc"
 cask "xquartz"
 mas "Disk Speed Test", id: 425264550
-mas "Howler Timer", id: 428846772
