@@ -6,7 +6,7 @@ for name in bkp-routines progress; do
   source "$HOME/bin/$name.sh" || bailout "Dependency $name failed"
 done
 
-parse-options "$@"
+# parse-options "$@"
 
 ######----------------- Quick exits  -----------------######
 if [[ "$#" != 0 ]]; then
