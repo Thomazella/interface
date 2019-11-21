@@ -1,1 +1,2 @@
 MILESTONE="Sprint 1 (15 ~ 21)"
+export MONGOMS_SYSTEM_BINARY=$(command -v mongod)
