@@ -14,51 +14,57 @@ cl() {
 
 chpwd() {
   case $PWD in
-  $HOME/Desktop/procure)
-    source ".env"
+  $HOME/Desktop/community)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-enter-dir"
     ;;
   $HOME/Desktop/confy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-enter-dir"
     ;;
-  $HOME/Desktop/sense)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-enter-dir"
+  $HOME/Desktop/elixir-backend-example)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-enter-dir"
     ;;
   $HOME/Documents/GoogleDrive/Mackup)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-enter-dir"
     ;;
-  $HOME/Desktop/elixir-backend-example)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-enter-dir"
-    ;;
-  $HOME/Desktop/community)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-enter-dir"
-    ;;
   $HOME/Desktop/oreid)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/oreid/on-enter-dir"
+    ;;
+  $HOME/Desktop/procure)
+    source ".env"
+    ;;
+  $HOME/Desktop/sense)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-enter-dir"
+    ;;
+  $HOME/Desktop/taffy)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/taffy/on-enter-dir"
     ;;
   *) ;;
   esac
 
   case $OLDPWD in
-  $HOME/Desktop/procure)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/procure/on-leave-dir"
+  $HOME/Desktop/community)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-leave-dir"
     ;;
   $HOME/Desktop/confy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/confy/on-leave-dir"
     ;;
-  $HOME/Desktop/sense)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-leave-dir"
+  $HOME/Desktop/elixir-backend-example)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-leave-dir"
     ;;
   $HOME/Documents/GoogleDrive/Mackup)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/interface/on-leave-dir"
     ;;
-  $HOME/Desktop/elixir-backend-example)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/elixir-backend-example/on-leave-dir"
-    ;;
-  $HOME/Desktop/community)
-    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/community/on-leave-dir"
-    ;;
   $HOME/Desktop/oreid)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/oreid/on-leave-dir"
+    ;;
+  $HOME/Desktop/procure)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/procure/on-leave-dir"
+    ;;
+  $HOME/Desktop/sense)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/sense/on-leave-dir"
+    ;;
+  $HOME/Desktop/taffy)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/taffy/on-leave-dir"
     ;;
   *) ;;
   esac
