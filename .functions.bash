@@ -892,7 +892,6 @@ hisl() {
   eval "$command"
 }
 
-# sense tasks
 stask() {
   if [ "$#" == 0 ]; then
     cat "$HOME/tasks.txt"
@@ -911,6 +910,31 @@ stask() {
       echo "https://github.com/makesense/sense-chat-mobile/issues/${name}" >>"$HOME/tasks.txt"
     else
       echo "${name}" >>"$HOME/tasks.txt"
+    fi
+  done
+}
+
+ttask() {
+  if [ ! -f "$HOME/ttasks.txt" ]; then
+    touch "$HOME/ttasks.txt"
+  fi
+  if [ "$#" == 0 ]; then
+    cat "$HOME/ttasks.txt"
+    return
+  fi
+  if [ "$1" == "clean" ] || [ "$1" == "clear" ]; then
+    echo >"$HOME/ttasks.txt"
+    return
+  fi
+  if [ "$1" == "copy" ]; then
+    pbcopy <"$HOME/ttasks.txt"
+    return
+  fi
+  for name in "$@"; do
+    if [[ "$name" =~ [0-9]{2,4} ]]; then
+      echo "https://github.com/johnschenk/Taffy/issues/${name}" >>"$HOME/ttasks.txt"
+    else
+      echo "${name}" >>"$HOME/ttasks.txt"
     fi
   done
 }
