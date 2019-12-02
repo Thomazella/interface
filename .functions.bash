@@ -930,8 +930,12 @@ ttask() {
     pbcopy <"$HOME/ttasks.txt"
     return
   fi
+  if [ "$1" == "edit" ]; then
+    code "$HOME/ttasks.txt"
+    return
+  fi
   for name in "$@"; do
-    if [[ "$name" =~ [0-9]{2,4} ]]; then
+    if [[ "$name" =~ ^[0-9]{2,4} ]]; then
       echo "https://github.com/johnschenk/Taffy/issues/${name}" >>"$HOME/ttasks.txt"
     else
       echo "${name}" >>"$HOME/ttasks.txt"
