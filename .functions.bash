@@ -38,6 +38,9 @@ chpwd() {
   $HOME/Desktop/taffy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/taffy/on-enter-dir"
     ;;
+  $HOME/Desktop/another-elixir)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/another-elixir/on-enter-dir"
+    ;;
   *) ;;
   esac
 
@@ -65,6 +68,9 @@ chpwd() {
     ;;
   $HOME/Desktop/taffy)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/taffy/on-leave-dir"
+    ;;
+  $HOME/Desktop/another-elixir)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/another-elixir/on-leave-dir"
     ;;
   *) ;;
   esac
@@ -922,8 +928,9 @@ ttask() {
     cat "$HOME/ttasks.txt"
     return
   fi
-  if [ "$1" == "clean" ] || [ "$1" == "clear" ]; then
-    echo >"$HOME/ttasks.txt"
+  if [ "$1" == "day" ]; then
+    printf "\n------%s------\n" "$(date +"%b %d %T")" >>"$HOME/ttasks.txt"
+    cat "$HOME/ttasks.txt"
     return
   fi
   if [ "$1" == "copy" ]; then
@@ -941,6 +948,7 @@ ttask() {
       echo "${name}" >>"$HOME/ttasks.txt"
     fi
   done
+  cat "$HOME/ttasks.txt"
 }
 
 hidedesktop() {
