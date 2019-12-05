@@ -41,6 +41,9 @@ chpwd() {
   $HOME/Desktop/another-elixir)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/another-elixir/on-enter-dir"
     ;;
+  $HOME/Desktop/helpers-console)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/helpers-console/on-enter-dir"
+    ;;
   *) ;;
   esac
 
@@ -71,6 +74,9 @@ chpwd() {
     ;;
   $HOME/Desktop/another-elixir)
     source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/another-elixir/on-leave-dir"
+    ;;
+  $HOME/Desktop/helpers-console)
+    source "$HOME/Documents/GoogleDrive/Mackup/chpwd-to-source/helpers-console/on-leave-dir"
     ;;
   *) ;;
   esac
