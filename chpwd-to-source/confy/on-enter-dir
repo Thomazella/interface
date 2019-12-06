@@ -1,2 +1,5 @@
 MILESTONE="Sprint 1 (15 ~ 21)"
 export MONGOMS_SYSTEM_BINARY=$(command -v mongod)
+unalias ytw yt
+alias yt="yarn jest"
+alias ytw="yarn jest --watch"

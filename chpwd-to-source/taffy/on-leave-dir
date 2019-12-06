@@ -1,2 +1,2 @@
 unalias gcom gmom gppr
-srit
+source $HOME/.aliases.bash

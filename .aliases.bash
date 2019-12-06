@@ -99,10 +99,14 @@ alias caskR='brew cask uninstall'
 ###################
 #--------bash files
 ###################
-alias bashrc='code        ~/.zshrc'
-alias bashaliases='code   ~/.aliases.bash'
-alias bashfunctions='code ~/.functions.bash'
-alias bashps1='code       ~/.prompt.bash'
+alias bashrc='webstorm        ~/.zshrc'
+alias bashaliases='webstorm   ~/.aliases.bash'
+alias bashfunctions='webstorm ~/.functions.bash'
+alias bashps1='webstorm       ~/.prompt.bash'
+# alias bashrc='code        ~/.zshrc'
+# alias bashaliases='code   ~/.aliases.bash'
+# alias bashfunctions='code ~/.functions.bash'
+# alias bashps1='code       ~/.prompt.bash'
 ###################
 #----------mistakes
 ###################
@@ -310,8 +314,8 @@ alias rnra="react-native run-android"
 alias acceptAllLicenses="yes | \$HOME/Library/Android/sdk/tools/bin/sdkmanager --licenses"
 alias snoop='echo sudo opensnoop -ve 2>&1 PIPE g idea.properties'
 alias clearIapCache="adb shell pm clear com.android.vending"
-alias c.="code ."
-alias c="code"
+alias c.="webstorm ."
+alias c="webstorm"
 alias lgl="echo build ci chore docs feat fix perf refactor revert style test"
 alias macinstall="echo sudo /Applications/Install\ macOS\ Catalina\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/USB /Applications/Install\ macOS\ Catalina\ Beta.app --nointeraction"
 alias ytw="yarn test --watch"
