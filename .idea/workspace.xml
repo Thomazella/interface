@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4809660a-7a53-43bc-b7c7-121f7bf54e6a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.Brewfile" beforeDir="false" afterPath="$PROJECT_DIR$/.Brewfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.aliases.bash" beforeDir="false" afterPath="$PROJECT_DIR$/.aliases.bash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.bashrc" beforeDir="false" afterPath="$PROJECT_DIR$/.bashrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chpwd-to-source/confy/on-enter-dir" beforeDir="false" afterPath="$PROJECT_DIR$/chpwd-to-source/confy/on-enter-dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chpwd-to-source/confy/on-leave-dir" beforeDir="false" afterPath="$PROJECT_DIR$/chpwd-to-source/confy/on-leave-dir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chpwd-to-source/taffy/on-leave-dir" beforeDir="false" afterPath="$PROJECT_DIR$/chpwd-to-source/taffy/on-leave-dir" afterDir="false" />
-    </list>
+    <list default="true" id="4809660a-7a53-43bc-b7c7-121f7bf54e6a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,7 +15,7 @@
     <session id="-2042910136">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -48,35 +41,7 @@
     <favorites_list name="Mackup" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.aliases.bash">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.bashrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.Brewfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,12 +106,12 @@
       <updated>1575642469145</updated>
       <workItem from="1575642470225" duration="66000" />
       <workItem from="1575642548492" duration="460000" />
-      <workItem from="1575643022830" duration="538000" />
+      <workItem from="1575643022830" duration="1014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1064000" />
+    <option name="totallyTimeSpent" value="1540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1080" extended-state="0" />
@@ -162,7 +127,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3299595" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299595" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3299595" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -184,10 +149,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.aliases.bash">
+    <entry file="file://$PROJECT_DIR$/.Brewfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="312">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -198,10 +163,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.Brewfile">
+    <entry file="file://$PROJECT_DIR$/.aliases.bash">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="264">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
