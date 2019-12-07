@@ -988,3 +988,12 @@ adbc() {
     echo "no android/app/build/outputs/apk/release/app-release.apk to copy"
   fi
 }
+
+# fix calling git status when there's no repo, call ls instead
+gss() {
+  if command git status -s 2>/dev/null 1>&2; then
+    command git status -s
+  else
+    ls
+  fi
+}
