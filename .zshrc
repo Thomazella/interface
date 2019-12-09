@@ -40,7 +40,13 @@ GIT_PS1_SHOWCOLORHINTS="true"
 
 #========== Mac only
 if [[ "$(uname -s)" =~ Darwin ]]; then
-  export PATH="$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+  # android SDK
+  # gradle needs this to find SDK. Opening android studio once fixes.
+  export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+  # generic stuff
+  export PATH="$ANDROID_SDK_ROOT/build-tools/28.0.0/:$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
   export MANPATH="/usr/local/opt/erlang/lib/erlang/man:$MANPATH"
   export CDPATH=$HOME:/Volumes:$HOME/Desktop
   export EDITOR='code -w'
@@ -51,10 +57,6 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/krb5/lib"
   export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/libxslt/include -I/usr/local/opt/openssl/include -I/usr/local/opt/krb5/include"
 
-  # android SDK
-  # gradle needs this to find SDK. Opening android studio once fixes.
-  export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-  export ANDROID_HOME="$HOME/Library/Android/sdk"
 
   # fix compinit path pointing to old version (auto pruned from brew on update)
   # before nvm!

@@ -973,17 +973,21 @@ kylin() {
 
 adbI() {
   if [ "$1" ]; then
+    aapt dump badging "$1" | grep package
     adb install "$1"
   elif [ -f android/app/build/outputs/apk/release/app-release.apk ]; then
     adb install android/app/build/outputs/apk/release/app-release.apk
+    aapt dump badging android/app/build/outputs/apk/release/app-release.apk | grep package
   else
     echo "no android/app/build/outputs/apk/release/app-release.apk. Please pass apk path"
+    return
   fi
 }
 
 adbc() {
   if [ -f android/app/build/outputs/apk/release/app-release.apk ]; then
     mv android/app/build/outputs/apk/release/app-release.apk "$HOME/Desktop/"
+    aapt dump badging android/app/build/outputs/apk/release/app-release.apk | grep package
   else
     echo "no android/app/build/outputs/apk/release/app-release.apk to copy"
   fi
