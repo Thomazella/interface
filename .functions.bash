@@ -986,8 +986,8 @@ adbI() {
 
 adbc() {
   if [ -f android/app/build/outputs/apk/release/app-release.apk ]; then
-    mv android/app/build/outputs/apk/release/app-release.apk "$HOME/Desktop/"
     aapt dump badging android/app/build/outputs/apk/release/app-release.apk | grep package
+    mv android/app/build/outputs/apk/release/app-release.apk "$HOME/Desktop/"
   else
     echo "no android/app/build/outputs/apk/release/app-release.apk to copy"
   fi
