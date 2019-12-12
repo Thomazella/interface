@@ -282,6 +282,7 @@ alias gnuke='git reset HEAD --hard && git clean -fd'
 alias wip="git add --all && git commit -nm wip"
 alias grl="git reflog"
 alias lgs="SKIPADD=1 && lg"
+alias lgw="WIPCOMMIT=1 && lg"
 ###################
 #------------dev
 ###################

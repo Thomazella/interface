@@ -649,6 +649,10 @@ lg() {
     fi
     #build msg string
     msg="${type}(${scope}): $args"
+    if [ "$WIPCOMMIT" ]; then
+      msg="${msg} [skip ci]"
+      unset WIPCOMMIT
+    fi
     echo commit msg \> "$msg"
     git commit -q -m "$msg"
   else
@@ -672,6 +676,11 @@ lg() {
     gp
   fi
   gss
+}
+
+# to alias lg do something else alias _lg instead
+_lg(){
+  lg "$@"
 }
 
 #- - - - - - - - - - -

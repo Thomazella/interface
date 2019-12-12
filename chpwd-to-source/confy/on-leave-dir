@@ -1,4 +1,4 @@
 unset MILESTONE
 unset MONGOMS_SYSTEM_BINARY
-unalias ytw yt
+unalias ytw yt lg
 source $HOME/.aliases.bash
