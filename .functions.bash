@@ -940,12 +940,12 @@ ttask() {
     touch "$HOME/ttasks.txt"
   fi
   if [ "$#" == 0 ]; then
-    cat "$HOME/ttasks.txt"
+    tail "$HOME/ttasks.txt"
     return
   fi
   if [ "$1" == "day" ]; then
     printf "\n------%s------\n" "$(date +"%b %d %T")" >>"$HOME/ttasks.txt"
-    cat "$HOME/ttasks.txt"
+    tail "$HOME/ttasks.txt"
     return
   fi
   if [ "$1" == "copy" ]; then
@@ -963,7 +963,7 @@ ttask() {
       echo "${name}" >>"$HOME/ttasks.txt"
     fi
   done
-  cat "$HOME/ttasks.txt"
+  tail "$HOME/ttasks.txt"
 }
 
 hidedesktop() {

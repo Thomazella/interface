@@ -280,7 +280,7 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 alias grev='git revert'
 alias gnuke='git reset HEAD --hard && git clean -fd'
 alias wip="git add --all && git commit -nm wip"
-alias grl="git reflog"
+alias grl="git reflog | head -20 | sed -Ee \"s/^.*from (.*) to (.*).*$/\1 -> \2/\" -e \"/commit|cherry/d"\"
 alias lgs="SKIPADD=1 && lg"
 alias lgw="WIPCOMMIT=1 && lg"
 ###################
