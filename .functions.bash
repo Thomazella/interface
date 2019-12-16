@@ -679,7 +679,7 @@ lg() {
 }
 
 # to alias lg do something else alias _lg instead
-_lg(){
+_lg() {
   lg "$@"
 }
 
@@ -954,6 +954,10 @@ ttask() {
   fi
   if [ "$1" == "edit" ]; then
     code "$HOME/ttasks.txt"
+    return
+  fi
+    if [ "$1" == "clean" ] || [ "$1" == "clear" ]; then
+    echo "Can't auto clean this project, sorry about that. Use ttask edit."
     return
   fi
   for name in "$@"; do

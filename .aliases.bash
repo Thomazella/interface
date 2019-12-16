@@ -180,7 +180,7 @@ alias ggpush="git push origin \$GIT_BRANCH"
 # alias ggpush="git push origin \$__git_ps1_branch_name"
 alias ggsup="git branch --set-upstream-to=origin/\$GIT_BRANCH"
 # alias ggsup="git branch --set-upstream-to=origin/\$__git_ps1_branch_name"
-alias gpf='git push foton'
+alias gpf='git push --set-upstream foton HEAD'
 alias ghh='git help'
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
