@@ -283,6 +283,7 @@ alias wip="git add --all && git commit -nm wip"
 alias grl="git reflog | head -20 | sed -Ee \"s/^.*from (.*) to (.*).*$/\1 -> \2/\" -e \"/commit|cherry/d"\"
 alias lgs="SKIPADD=1 && lg"
 alias lgw="WIPCOMMIT=1 && lg"
+alias caf="caffeinate"
 ###################
 #------------dev
 ###################
