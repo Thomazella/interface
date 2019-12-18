@@ -284,6 +284,7 @@ alias grl="git reflog | head -20 | sed -Ee \"s/^.*from (.*) to (.*).*$/\1 -> \2/
 alias lgs="SKIPADD=1 && lg"
 alias lgw="WIPCOMMIT=1 && lg"
 alias caf="caffeinate"
+alias g-="git checkout -"
 ###################
 #------------dev
 ###################
