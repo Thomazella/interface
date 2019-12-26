@@ -17,9 +17,11 @@ tput init
 
 #========== Completions, external scripts, git prompt
 # Early sourcing
-for file in /usr/local/etc/bash_completion.d/*; do
-  source "$file"
-done
+if [ -d /usr/local/etc/bash_completion.d ]; then
+  for file in /usr/local/etc/bash_completion.d/*; do
+    source "$file"
+  done
+fi
 dosource "Code/dBash/main.bash"
 dosource "Code/hue/main.bash"
 dosource ".yarn-completion.bash"

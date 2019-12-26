@@ -38,6 +38,9 @@ alias google="s -p duckduckgo"
 __git_ps1(){
   true
 }
+goo(){
+  google "$@"
+}
 # unalias dircolors
 
 #========== Keyboard
