@@ -12,7 +12,6 @@ test*
 .ssh/
 .subversion/
 Library/
-bash-on-*
 plain-text/
 .wakatime*
 .vscode
