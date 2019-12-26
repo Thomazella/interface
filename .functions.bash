@@ -388,7 +388,12 @@ tra() {
 
   [[ $last =~ (.+)[/][^/]+$ ]]
   # shellcheck disable=SC2035
-  ternary -n "${BASH_REMATCH[1]}" ? ls "${BASH_REMATCH[1]}" : ls
+  if [ -n "${BASH_REMATCH[1]}" ]; then
+    ls "${BASH_REMATCH[1]}"
+  else
+    ls
+  fi
+  #ternary -n "${BASH_REMATCH[1]}" ? ls "${BASH_REMATCH[1]}" : ls
 }
 
 #- - - - - - - - - - -
@@ -412,8 +417,8 @@ grepl() { #grep -l simply
   ggrep --color=auto -iE "$@" -l ./* .* 2>/dev/null
 }
 
-#- - - - - - - - - - -
 
+#- - - - - - - - - - -
 grepf() { #grep file
   if [ "$#" -lt 2 ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     precho "grep case-insensitive

@@ -251,6 +251,7 @@ alias gsps='git show --pretty=short --show-signature'
 alias gsr='git svn rebase'
 # alias gss='git status -s'
 alias gsss='gss'
+alias gs='gss'
 alias gssss='gss'
 alias gsssss='gss'
 alias gssssss='gss'
@@ -309,8 +310,8 @@ alias npmh="npm repo"
 alias npmI="npm install"
 alias y="yarn"
 alias yarnl="yarn list --depth=0"
-alias yarngl="yarn global list --depth=0"
 # alias adbI="adb install"
+alias yarngl="yarn global list --depth=0"
 alias adbl="adb devices"
 alias adbd="adb shell input keyevent 82"
 alias rnra="react-native run-android"
