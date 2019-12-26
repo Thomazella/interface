@@ -189,9 +189,10 @@ glyphGitCat() {
 }
 
 getTermColumns() {
-  if not truthy "$COLUMNS"; then
-    mute command -v tput
-    iflast export COLUMNS="$(tput cols | tr -d \\n)"
+  if [ ! "$COLUMNS" ]; then
+    if command -v tput 2>/dev/null 1>&2; then
+      export COLUMNS="$(tput cols | tr -d \\n)"
+    fi
   fi
 }
 
