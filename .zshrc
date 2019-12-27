@@ -17,15 +17,25 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+WARN_SOURCE="no"
+
+safe_source(){
+  if [ -f "$1" ]; then
+    source "$1"
+  else
+    [ "$WARN_SOURCE" == "yes" ] && echo "$1" not found to source
+  fi
+}
+
 #========== Bash stuff ==========#
 
 #it's recommended by a man page to set this here for better compatibility I guess
 tput init
 
 #========== Completions, external scripts, git prompt
-source "$HOME/Code/dBash/main.bash"
-source "$HOME/Code/hue/main.bash"
-source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+safe_source "$HOME/Code/dBash/main.bash"
+safe_source "$HOME/Code/hue/main.bash"
+safe_source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 
 GIT_PS1_SHOWDIRTYSTATE="true"
 GIT_PS1_SHOWSTASHSTATE="true"
@@ -40,6 +50,7 @@ GIT_PS1_SHOWCOLORHINTS="true"
 
 #========== Mac only
 if [[ "$(uname -s)" =~ Darwin ]]; then
+  DOTFILE_PREFIX=$HOME
   # android SDK
   # gradle needs this to find SDK. Opening android studio once fixes.
   export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
@@ -81,12 +92,11 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   source /usr/local/opt/asdf/asdf.sh
   export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
   export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
+fi
 
-  if [ -f $HOME/.prompt.zsh ]; then
-    source $HOME/.prompt.zsh
-  else
-    export PS1=$'\n%~\n%# '
-  fi
+#========== Linux only
+if [[ "$(uname -s)" =~ Linux ]]; then
+  DOTFILE_PREFIX=$HOME/Desktop/interface
 fi
 
 #========== Environment
@@ -98,9 +108,14 @@ export BASH_ENV="$HOME/.bashrc.bash"
 GPG_TTY=$(tty) && export GPG_TTY
 
 #========== Late sourcing
-source $HOME/.aliases.bash
-source $HOME/.functions.bash
-source $HOME/Documents/GoogleDrive/Mackup/.private.bash
+source $DOTFILE_PREFIX/.aliases.bash
+source $DOTFILE_PREFIX/.functions.bash
+source $DOTFILE_PREFIX/.private.bash
+if [ -f $DOTFILE_PREFIX/.prompt.zsh ]; then
+  source $DOTFILE_PREFIX/.prompt.zsh
+else
+  export PS1=$'\n%~\n%# '
+fi
 # dosource "$VSCODE_OVERRIDES"
 # eval "$(direnv hook zsh)"
 
