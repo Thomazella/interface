@@ -6,24 +6,34 @@
 DOTFILE_PATH="/home/vacation/Desktop/interface"
 # echo "I am" $(whoami)
 
+export WARN_SOURCE_FAIL="yes"
+
+safe_source(){
+  if [ -f "$1" ]; then
+    source "$1"
+  else
+    [ "$WARN_SOURCE_FAIL" == "yes" ] && echo "$1" not found to safe_source
+  fi
+}
+
 #========== MacOS Bashrc
 if [ -f $DOTFILE_PATH/.bashrc.bash ]; then
-  source $DOTFILE_PATH/.bashrc.bash
+  safe_source $DOTFILE_PATH/.bashrc.bash
 fi
 
 #========== Aliases
 if [ -f $DOTFILE_PATH/.aliases.bash ]; then
-  source $DOTFILE_PATH/.aliases.bash
+  safe_source $DOTFILE_PATH/.aliases.bash
 fi
 
 #========== Functions
 if [ -f $DOTFILE_PATH/.functions.bash ]; then
-  source $DOTFILE_PATH/.functions.bash
+  safe_source $DOTFILE_PATH/.functions.bash
 fi
 
 #========== Prompt
 if [ -f $DOTFILE_PATH/.prompt.bash ]; then
-  source $DOTFILE_PATH/.prompt.bash
+  safe_source $DOTFILE_PATH/.prompt.bash
 fi
 
 #========== Overrides
@@ -68,13 +78,13 @@ export EDITOR='code -w'
 unset PREFIX            # NVM hates this
 unset npm_config_prefix # NVM hates this
 # export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"                   # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && safe_source "$NVM_DIR/nvm.sh"                   # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && safe_source "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 
 # elixir/erlang with asdf
 export ERL_AFLAGS="-kernel shell_history enabled"
-# source /usr/local/opt/asdf/asdf.sh
+# safe_source /usr/local/opt/asdf/asdf.sh
 export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
 
