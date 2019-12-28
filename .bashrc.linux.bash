@@ -4,27 +4,11 @@
 # [[ $- != *i* ]] && return
 
 DOTFILE_PATH="/home/vacation/Desktop/interface"
-# echo "I am" $(whoami)
 
-#========== Bashrc
-if [ -f $DOTFILE_PATH/.bashrc.bash ]; then
-  safe_source $DOTFILE_PATH/.bashrc.bash
-fi
-
-#========== Aliases
-if [ -f $DOTFILE_PATH/.aliases.bash ]; then
-  safe_source $DOTFILE_PATH/.aliases.bash
-fi
-
-#========== Functions
-if [ -f $DOTFILE_PATH/.functions.bash ]; then
-  safe_source $DOTFILE_PATH/.functions.bash
-fi
-
-#========== Prompt
-if [ -f $DOTFILE_PATH/.prompt.bash ]; then
-  safe_source $DOTFILE_PATH/.prompt.bash
-fi
+safe_source $DOTFILE_PATH/.bashrc.bash
+safe_source $DOTFILE_PATH/.aliases.bash
+safe_source $DOTFILE_PATH/.functions.bash
+safe_source $DOTFILE_PATH/.prompt.linux.bash
 
 #========== Overrides
 alias gmv='mv'
@@ -70,7 +54,6 @@ unset npm_config_prefix # NVM hates this
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && safe_source "$NVM_DIR/nvm.sh"                   # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && safe_source "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
 
 # elixir/erlang with asdf
 export ERL_AFLAGS="-kernel shell_history enabled"
