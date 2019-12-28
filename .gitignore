@@ -15,4 +15,4 @@ Library/
 plain-text/
 .wakatime*
 .vscode
-.private.bash
+.private*

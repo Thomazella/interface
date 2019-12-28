@@ -165,6 +165,9 @@ pacu-checker() {
   fi
 }
 
-#eval $(keychain -q --eval id_rsa)
+if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ] ; then
+    eval $(ssh-agent)
+    $DOTFILE_PATH/.private-ssh-add.expect
+fi
 linux-start
 systemctl --user start tilda.service
