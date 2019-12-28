@@ -8,6 +8,7 @@ DOTFILE_PATH="/home/vacation/Desktop/interface"
 safe_source $DOTFILE_PATH/.bashrc.bash
 safe_source $DOTFILE_PATH/.aliases.bash
 safe_source $DOTFILE_PATH/.functions.bash
+safe_source $DOTFILE_PATH/.private.bash
 safe_source $DOTFILE_PATH/.prompt.linux.bash
 
 #========== Overrides
