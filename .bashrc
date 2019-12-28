@@ -5,7 +5,7 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
 fi
 
 if [[ "$(uname -s)" =~ Linux ]]; then
-  SHELL_CONFIG="/home/vacation/Desktop/interface/bash-on-linux/.bashrc"
+  SHELL_CONFIG="/home/vacation/Desktop/interface/.bashrc.linux.bash"
 fi
 
 if [ $SHELL_CONFIG ]; then
