@@ -14,8 +14,6 @@ fi
 #========== Aliases
 if [ -f $DOTFILE_PATH/.aliases.bash ]; then
   source $DOTFILE_PATH/.aliases.bash
-else
-  echo "$DOTFILE_PATH/.aliases.bash not found"
 fi
 
 #========== Functions
@@ -35,13 +33,13 @@ alias gdd='dd'
 alias pbcopy='xclip -selection c'
 alias gls='/usr/bin/ls'
 alias google="s -p duckduckgo"
+alias .i="cd $DOTFILE_PATH"
 __git_ps1(){
   true
 }
 goo(){
   google "$@"
 }
-# unalias dircolors
 
 #========== Keyboard
 #xmodmap $HOME/.xmodmap
@@ -49,32 +47,49 @@ goo(){
 
 #========== Environment
 export PATH="$HOME/bin/monero-gui:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:\
-/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin:/home/linuxbrew/.linuxbrew/bin"
-export CDPATH=$HOME:/Media:/
-export EDITOR='code'
-
-#========== Misc
+/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/go/bin"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
-#GO Binaries
-export PATH=$PATH:/usr/local/go/bin
+
+# android SDK
+# gradle needs this to find SDK. Opening android studio once fixes.
+# export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# generic stuff
+# export PATH="$ANDROID_SDK_ROOT/build-tools/28.0.0/:$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+# export MANPATH="/usr/local/opt/erlang/lib/erlang/man:$MANPATH"
+export CDPATH=$HOME:/Media:/
+export EDITOR='code -w'
+# export GOPATH="$HOME/.go"
+# LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
+
+# NVM
+unset PREFIX            # NVM hates this
+unset npm_config_prefix # NVM hates this
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"                   # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+
+# elixir/erlang with asdf
+export ERL_AFLAGS="-kernel shell_history enabled"
+# source /usr/local/opt/asdf/asdf.sh
+export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
+export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
 
 #========== Linux specific
 alias aur='aurman'
 alias aurs='aurman --aur --sync --search'
 alias aurI='aurman --sync'
-
 alias sys='systemctl'
 alias lsblk='lsblk -f'
 alias desktop='sudo systemctl start sddm.service'
 alias sddm='sddm.service'
 alias soff='systemctl poweroff'
-
 alias drive='rclone'
 alias ssh='ssh-ident'
 alias .s='sudo'
-
-#-----pacman & arch
 alias pac='pacman'
 alias paci='pacman -Si'
 alias pacl='pacman -Q'
@@ -168,5 +183,4 @@ pacu-checker() {
 
 #eval $(keychain -q --eval id_rsa)
 linux-start
-#tilda &
-#disown
+systemctl --user start tilda.service
