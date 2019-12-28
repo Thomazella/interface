@@ -8,9 +8,9 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
   done
 fi
 
-safe_source "Code/dBash/main.bash"
-safe_source "Code/hue/main.bash"
-safe_source ".yarn-completion.bash"
+safe_source "$HOME/Code/dBash/main.bash"
+safe_source "$HOME/Code/hue/main.bash"
+safe_source "$HOME/.yarn-completion.bash"
 
 #========== Environment
 # export PATH="/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/bin:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
@@ -41,6 +41,6 @@ if [ -f ~/.prompt.bash ]; then
 else
   export PS1="\\n\\w\\n\$ "
 fi
-safe_source ".aliases.bash"
-safe_source ".private.bash"
-safe_source ".functions.bash"
+safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.aliases.bash"
+safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.private.bash"
+safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.functions.bash"
