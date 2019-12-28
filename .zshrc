@@ -68,7 +68,6 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/krb5/lib"
   export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/libxslt/include -I/usr/local/opt/openssl/include -I/usr/local/opt/krb5/include"
 
-
   # fix compinit path pointing to old version (auto pruned from brew on update)
   # before nvm!
   CURRENT=$(/usr/bin/find /usr/local/Cellar/zsh -depth 1 -type d | sed -e 's/.\///')
