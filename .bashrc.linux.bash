@@ -6,17 +6,7 @@
 DOTFILE_PATH="/home/vacation/Desktop/interface"
 # echo "I am" $(whoami)
 
-export WARN_SOURCE_FAIL="yes"
-
-safe_source(){
-  if [ -f "$1" ]; then
-    source "$1"
-  else
-    [ "$WARN_SOURCE_FAIL" == "yes" ] && echo "$1" not found to safe_source
-  fi
-}
-
-#========== MacOS Bashrc
+#========== Bashrc
 if [ -f $DOTFILE_PATH/.bashrc.bash ]; then
   safe_source $DOTFILE_PATH/.bashrc.bash
 fi

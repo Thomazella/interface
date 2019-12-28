@@ -1,15 +1,27 @@
 #! /usr/bin/env bash
-SHELL_CONFIG=""
+
+export WARN_SOURCE_FAIL="yes"
+
+safe_source(){
+  if [ -f "$1" ]; then
+    source "$1"
+  else
+    [ "$WARN_SOURCE_FAIL" == "yes" ] && echo "$1" not found to source
+  fi
+}
+
+CONFIG_FILE=""
+
 if [[ "$(uname -s)" =~ Darwin ]]; then
-  SHELL_CONFIG="/Users/vamac/.bashrc.bash"
+  CONFIG_FILE="/Users/vamac/.bashrc.mac.bash"
 fi
 
 if [[ "$(uname -s)" =~ Linux ]]; then
-  SHELL_CONFIG="/home/vacation/Desktop/interface/.bashrc.linux.bash"
+  CONFIG_FILE="/home/vacation/Desktop/interface/.bashrc.linux.bash"
 fi
 
-if [ $SHELL_CONFIG ]; then
-  source $SHELL_CONFIG
+if [ $CONFIG_FILE ]; then
+  source $CONFIG_FILE
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
