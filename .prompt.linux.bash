@@ -68,4 +68,4 @@ makePS1() {
 }
 PS1=$(makePS1) && export PS1
 # shellcheck disable=2089 disable=2090
-PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$auxiliarColor$(glyphGitBranch)  $end$mainColor$underline%s$end'" && export PROMPT_COMMAND
+PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$auxiliarColor$(glyphGitBranch)  $end$mainColor$underline%s$end' && chpwd" && export PROMPT_COMMAND

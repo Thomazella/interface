@@ -417,7 +417,6 @@ grepl() { #grep -l simply
   ggrep --color=auto -iE "$@" -l ./* .* 2>/dev/null
 }
 
-
 #- - - - - - - - - - -
 grepf() { #grep file
   if [ "$#" -lt 2 ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
@@ -961,7 +960,7 @@ ttask() {
     code "$HOME/ttasks.txt"
     return
   fi
-    if [ "$1" == "clean" ] || [ "$1" == "clear" ]; then
+  if [ "$1" == "clean" ] || [ "$1" == "clear" ]; then
     echo "Can't auto clean this project, sorry about that. Use ttask edit."
     return
   fi

@@ -8,6 +8,7 @@ DOTFILE_PATH="/home/vacation/Desktop/interface"
 safe_source $DOTFILE_PATH/.bashrc.bash
 safe_source $DOTFILE_PATH/.aliases.bash
 safe_source $DOTFILE_PATH/.functions.bash
+safe_source $DOTFILE_PATH/.functions.linux.bash
 safe_source $DOTFILE_PATH/.private.bash
 safe_source $DOTFILE_PATH/.prompt.linux.bash
 
@@ -19,10 +20,10 @@ alias pbcopy='xclip -selection c'
 alias gls='/usr/bin/ls'
 alias google="s -p duckduckgo"
 alias .i="cd $DOTFILE_PATH"
-__git_ps1(){
+__git_ps1() {
   true
 }
-goo(){
+goo() {
   google "$@"
 }
 
@@ -75,13 +76,13 @@ alias drive='rclone'
 alias ssh='ssh-ident'
 alias .s='sudo'
 alias pac='pacman'
-alias paci='pacman --sync --info' # -Si
-alias pacl='pacman --query' # -Q
-alias pacle='pacman --query --explicit' # -Qe
-alias pacs='pacman --sync --search' # -Ss
-alias pacI='sudo pacman --sync --noconfirm' # -S
-alias pacR='sudo pacman --remove' # -R
-alias pacRdd='sudo pacman --remove --nodeps --nodeps' # -Rdd
+alias paci='pacman --sync --info'                                                                            # -Si
+alias pacl='pacman --query'                                                                                  # -Q
+alias pacle='pacman --query --explicit'                                                                      # -Qe
+alias pacs='pacman --sync --search'                                                                          # -Ss
+alias pacI='sudo pacman --sync --noconfirm'                                                                  # -S
+alias pacR='sudo pacman --remove'                                                                            # -R
+alias pacRdd='sudo pacman --remove --nodeps --nodeps'                                                        # -Rdd
 alias pacu='sudo pacman --sync --sysupgrade --refresh --noconfirm && sudo pacman --sync --clean --noconfirm' # Syu && Sc
 alias pacuOff='pacu-wrapper && systemctl poweroff'
 alias pacuReboot='pacu-wrapper && systemctl reboot'
@@ -122,7 +123,7 @@ drive-list() {
   fi
 }
 
-routine-pull(){
+routine-pull() {
   drive-pull Mackup/.docker/
   # drive-pull Mackup/.emacs.d/
   drive-pull Mackup/.gnupg/
@@ -137,7 +138,7 @@ routine-pull(){
   drive-pull Mackup/.inputrc
 }
 
-linux-start(){
+linux-start() {
   #routine-pull &
   pacu-checker
 }
@@ -166,9 +167,9 @@ pacu-checker() {
   fi
 }
 
-if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ] ; then
-    eval $(ssh-agent) 2>/dev/null 1>&2
-    $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
+if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
+  eval $(ssh-agent) 2>/dev/null 1>&2
+  $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
 fi
 linux-start
 systemctl --user start tilda.service
