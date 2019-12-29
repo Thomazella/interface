@@ -1,6 +1,16 @@
 #! /usr/bin/env bash
 
-#- - - - - - - - - - -
+#========== Override macos
+
+__git_ps1() {
+  true
+}
+
+goo() {
+  google "$@"
+}
+
+#========== Generic
 
 chpwd() {
   case $PWD in
@@ -71,3 +81,99 @@ chpwd() {
   *) ;;
   esac
 }
+
+#- - - - - - - - - - -
+
+drive-push() {
+  if [ "$#" -gt 2 -o "$1" == -h -o "$#" == 0 ]; then
+    echo "Usage: drive-push target"
+    echo "Pushes target to google drive using rclone remote google-drive"
+    echo "Paths are relative to $HOME/GoogleDrive/"
+    return
+  fi
+  if [[ "$#" == 1 ]]; then
+    rclone copyto $HOME/GoogleDrive/$1 google-drive:$1
+  else
+    rclone copyto $HOME/GoogleDrive/$1 google-drive:$2
+  fi
+}
+
+#- - - - - - - - - - -
+
+drive-pull() {
+  if [ "$#" -gt 2 -o "$1" == -h -o "$#" == 0 ]; then
+    echo "Usage: drive-pull target"
+    echo "Pulls target from google drive using rclone remote google-drive"
+    echo "Paths are relative to $HOME/GoogleDrive/"
+    return
+  fi
+  if [[ "$#" == 1 ]]; then
+    rclone copyto "google-drive:$1" "$HOME/GoogleDrive/$1"
+  else
+    rclone copyto "google-drive:$2" "$HOME/GoogleDrive/$1"
+  fi
+}
+
+#- - - - - - - - - - -
+
+drive-list() {
+  if [[ "$#" == 0 ]]; then
+    rclone lsf google-drive:
+  else
+    rclone lsf "google-drive:$1"
+  fi
+}
+
+#- - - - - - - - - - -
+
+routine-pull() {
+  drive-pull Mackup/.docker/
+  # drive-pull Mackup/.emacs.d/
+  drive-pull Mackup/.gnupg/
+  drive-pull Mackup/.ssh/
+  drive-pull Mackup/.subversion/
+  drive-pull Mackup/.vscode/
+  # drive-pull Mackup/Library/
+  drive-pull Mackup/.directory
+  drive-pull Mackup/.emacs
+  drive-pull Mackup/.gitconfig
+  drive-pull Mackup/.hyper.js
+  drive-pull Mackup/.inputrc
+}
+
+#- - - - - - - - - - -
+
+linux-start() {
+  #routine-pull &
+  pacu-checker
+}
+
+#- - - - - - - - - - -
+
+pacu-wrapper() {
+  if ! mount | grep '/dev/sd[bc]1 on /boot' --quiet; then
+    echo '/boot doesnt seem to be mounted!'
+    return 1
+  fi
+
+  if ! mount | grep '/dev/sd[bc]1 on /media/efiPartition' --quiet; then
+    echo '/media/efiPartition doesnt seem to be mounted!'
+    return 1
+  fi
+
+  pacu
+  if [ "$?" == 1 ]; then
+    touch ~/.pacu-failed
+  fi
+}
+
+#- - - - - - - - - - -
+
+pacu-checker() {
+  if [ -f ~/.pacu-failed ]; then
+    echo "pacu failed last session."
+    \rm -f ~/.pacu-failed
+  fi
+}
+
+#- - - - - - - - - - -
