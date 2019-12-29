@@ -3,7 +3,6 @@ test*
 .git-completion.bash
 .atom/
 .bundle/
-.config/
 .docker/
 .emacs.d/
 .gnupg/
