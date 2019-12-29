@@ -198,7 +198,8 @@ getTermColumns() {
 
 #get a random color, for use outside ps1, scripts (no i on $-) don't set this var
 if [[ "$-" =~ i ]]; then
-  r256=$(random256Color) && export r256
+  r256=$(random256Color)
+  export r256
 fi
 
 makePS1() {
@@ -236,4 +237,5 @@ makePS1() {
   printf %s ${horizontalLine}$'\n'${workdir} $'$(git_super_status)\n'${decorations}
 }
 
-PROMPT=$(makePS1) && export PROMPT
+PROMPT=$(makePS1)
+export PROMPT

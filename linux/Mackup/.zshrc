@@ -62,7 +62,8 @@ if [[ "$(uname -s)" =~ Darwin ]]; then
   export CDPATH=$HOME:/Volumes:$HOME/Desktop
   export EDITOR='code -w'
   export GOPATH="$HOME/.go"
-  LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
+  LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW")
+  export LS_COLORS
 
   # compiler flags
   export LDFLAGS="-L/usr/local/opt/ruby/lib -L/usr/local/opt/libxslt/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/krb5/lib"
@@ -104,7 +105,8 @@ export BLOCKSIZE=1000000 #1 Megabyte
 export LESS="--RAW-CONTROL-CHARS --HILITE-UNREAD --window=-5 --quiet --LINE-NUMBERS --buffers=32768 --quit-if-one-screen --prompt=?eEND:%pb\\%. ?f%F:Stdin.\\: page %d of %D, line %lb of %L"
 export PAGER="less"
 export BASH_ENV="$HOME/.bashrc.bash"
-GPG_TTY=$(tty) && export GPG_TTY
+GPG_TTY=$(tty)
+export GPG_TTY
 
 #========== Late sourcing
 source $DOTFILE_PREFIX/.aliases.bash

@@ -17,7 +17,8 @@ safe_source "$HOME/.yarn-completion.bash"
 export CDPATH=$HOME:/Volumes:$HOME/Desktop
 # export EDITOR='code -w'
 export GOPATH="$HOME/.go"
-LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
+LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW")
+export LS_COLORS
 
 # android SDK
 # gradle needs this to find SDK. Opening android studio once fixes.

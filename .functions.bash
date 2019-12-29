@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+# shellcheck disable=SC1090
+
 #- - - - - - - - - - -
 
 cl() {
@@ -340,21 +342,6 @@ start-commands() {
 
 #- - - - - - - - - - -
 
-sritgo() {
-  if [ "$1" == "-x" ]; then
-    shift
-    # shellcheck source=/Users/vamac/.bashrc.bash
-    source "$HOME/.bashrc.bash"
-    bug "$@"
-  else
-    # shellcheck source=/Users/vamac/.bashrc.bash
-    source "$HOME/.bashrc.bash"
-    "$@"
-  fi
-}
-
-#- - - - - - - - - - -
-
 color() {
   color.sh "$@"
 }
@@ -386,13 +373,11 @@ tra() {
   done
 
   [[ $last =~ (.+)[/][^/]+$ ]]
-  # shellcheck disable=SC2035
   if [ -n "${BASH_REMATCH[1]}" ]; then
     ls "${BASH_REMATCH[1]}"
   else
     ls
   fi
-  #ternary -n "${BASH_REMATCH[1]}" ? ls "${BASH_REMATCH[1]}" : ls
 }
 
 #- - - - - - - - - - -

@@ -103,7 +103,6 @@
   "eslint.packageManager": "yarn",
   "eslint.run": "onType",
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -121,15 +120,8 @@
   },
   "eslint.validate": [
     "javascript",
-    "javascriptreact",
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
+    "typescript",
+    "javascriptreact"
   ],
   //
   // - - - - - - - - Python - - - - - - - - -

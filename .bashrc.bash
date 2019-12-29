@@ -27,5 +27,6 @@ export LESS="--RAW-CONTROL-CHARS --HILITE-UNREAD --window=-5 --quiet --buffers=3
 export PAGER="less"
 export BASH_ENV="$HOME/.bashrc"
 
-GPG_TTY=$(tty) && export GPG_TTY
+GPG_TTY=$(tty)
+export GPG_TTY
 shopt -s autocd cdspell dirspell globstar cmdhist lithist histverify histappend #nullglob

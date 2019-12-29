@@ -36,7 +36,8 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 export CDPATH=$HOME:/Media:/
 export EDITOR='code -w'
 # export GOPATH="$HOME/.go"
-# LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW") && export LS_COLORS
+# LS_COLORS=$(cat "$HOME/Code/LS_COLORS/LS_COLORS_RAW")
+# export LS_COLORS
 
 # NVM
 unset PREFIX            # NVM hates this
@@ -52,7 +53,7 @@ export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
 
 if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
-  eval $(ssh-agent) 2>/dev/null 1>&2
+  eval "$(ssh-agent)" 2>/dev/null 1>&2
   $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
 fi
 

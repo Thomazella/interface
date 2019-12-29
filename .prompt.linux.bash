@@ -24,14 +24,16 @@ glyphGitCat() {
 getTermColumns() {
   if [ ! "$COLUMNS" ]; then
     if command -v tput 2>/dev/null 1>&2; then
-      export COLUMNS="$(tput cols | tr -d \\n)"
+      COLUMNS="$(tput cols | tr -d \\n)"
+      export COLUMNS
     fi
   fi
 }
 
 #get a random color, for use outside ps1, scripts (no i on $-) don't set this var
 if [[ "$-" =~ i ]]; then
-  r256=$(random256Color) && export r256
+  r256=$(random256Color)
+  export r256
 fi
 
 # other formatting
@@ -45,9 +47,7 @@ makePS1() {
   # use "preGit" or "postGit" as arg 1 to integrate with gitprompt script
 
   # colors
-  local purple pink spacer horizontalLine workdir # historia S green yellow light_black black
-  purple="\\[\\e[34m\\]"
-  pink="\\[\\e[35m\\]"
+  local spacer horizontalLine workdir # historia S green yellow light_black black
   spacer=' '
   getTermColumns
 
@@ -66,6 +66,9 @@ makePS1() {
   *) printf %s "${horizontalLine}${workdir}\\n${decorations}" ;;
   esac
 }
-PS1=$(makePS1) && export PS1
+
+PS1=$(makePS1)
+export PS1
 # shellcheck disable=2089 disable=2090
-PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$auxiliarColor$(glyphGitBranch)  $end$mainColor$underline%s$end' && chpwd" && export PROMPT_COMMAND
+PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$auxiliarColor$(glyphGitBranch)  $end$mainColor$underline%s$end' && chpwd"
+export PROMPT_COMMAND
