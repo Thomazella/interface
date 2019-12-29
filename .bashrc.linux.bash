@@ -57,5 +57,5 @@ if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
   $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
 fi
 
-linux-start
 systemctl --user start tilda.service
+xset r rate 140 60

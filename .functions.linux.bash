@@ -145,13 +145,6 @@ routine-pull() {
 
 #- - - - - - - - - - -
 
-linux-start() {
-  #routine-pull &
-  pacu-checker
-}
-
-#- - - - - - - - - - -
-
 pacu-wrapper() {
   if ! mount | grep '/dev/sd[bc]1 on /boot' --quiet; then
     echo '/boot doesnt seem to be mounted!'
