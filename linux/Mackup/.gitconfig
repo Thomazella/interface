@@ -1,0 +1,29 @@
+[user]
+	name = Raphael Thomazella
+	email = thomazella9@gmail.com
+	signingkey = D600E88A0C5FE062
+[core]
+#	editor = code -w
+	compression = -1
+	excludesfile = /Users/vamac/.gitignore_global
+[commit]
+#	gpgSign = true
+#	template = /Users/vamac/.stCommitMsg
+[fetch]
+	prune = true
+[rebase]
+	missingCommitsCheck = error
+[pull]
+	rebase = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Volumes/Fez/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[help]
+	autocorrect = 1
+[checkout]
+	defaultRemote = origin
+[push]
+	default = upstream
