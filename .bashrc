@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# shellcheck disable=SC1090
 
 export WARN_SOURCE_FAIL="yes"
 
@@ -13,7 +14,7 @@ safe_source(){
 CONFIG_FILE=""
 
 if [[ "$(uname -s)" =~ Darwin ]]; then
-  CONFIG_FILE="/Users/vamac/.bashrc.mac.bash"
+  CONFIG_FILE="/Users/vamac/Documents/GoogleDrive/Mackup/.bashrc.mac.bash"
 fi
 
 if [[ "$(uname -s)" =~ Linux ]]; then
@@ -21,7 +22,7 @@ if [[ "$(uname -s)" =~ Linux ]]; then
 fi
 
 if [ $CONFIG_FILE ]; then
-  source $CONFIG_FILE
+  source "$CONFIG_FILE"
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
