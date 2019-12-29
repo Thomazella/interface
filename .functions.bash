@@ -11,7 +11,6 @@ cl() {
 }
 
 #- - - - - - - - - - -
-
 chpwd() {
   case $PWD in
   $HOME/Desktop/community)
