@@ -1383,7 +1383,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <LALT> {         [           Alt_L,          Meta_L ] };
     key <SPCE> {         [           space ] };
-    key <CAPS> {         [       Caps_Lock ] };
+    key <CAPS> {         [       Alt_R ] };
     key <FK01> {
         type= "CTRL+ALT",
         symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
@@ -1478,7 +1478,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <RALT> {
         type= "ONE_LEVEL",
-        symbols[Group1]= [ ISO_Level3_Shift ]
+        symbols[Group1]= [ Hyper_R ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
@@ -1489,7 +1489,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key  <END> {         [             End ] };
     key <DOWN> {         [            Down ] };
     key <PGDN> {         [            Next ] };
-    key  <INS> {         [          Insert ] };
+    key  <INS> {         [          Escape ] };
     key <DELE> {         [          Delete ] };
     key <MUTE> {         [   XF86AudioMute ] };
     key <VOL-> {         [ XF86AudioLowerVolume ] };
@@ -1505,7 +1505,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key <I129> {         [      KP_Decimal,      KP_Decimal ] };
     key <HNGL> {         [          Hangul ] };
     key <HJCV> {         [    Hangul_Hanja ] };
-    key <LWIN> {         [         Super_L ] };
+    key <LWIN> {         [         Hyper_L ] };
     key <RWIN> {         [         Super_R ] };
     key <COMP> {         [            Menu ] };
     key <STOP> {         [          Cancel ] };
