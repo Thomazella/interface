@@ -1478,7 +1478,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <RALT> {
         type= "ONE_LEVEL",
-        symbols[Group1]= [ Meta_R ]
+        symbols[Group1]= [ Alt_R ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
