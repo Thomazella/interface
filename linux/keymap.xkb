@@ -1282,7 +1282,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
         symbols[Group1]= [    bracketright,      braceright,  guillemotright, rightdoublequotemark ]
     };
     key <RTRN> {         [          Return ] };
-    key <LCTL> {         [       Control_L ] };
+    key <LCTL> {         [       Alt_L ] };
     key <AC01> {
         type= "FOUR_LEVEL_ALPHABETIC",
         symbols[Group1]= [               a,               A,          aacute,          Aacute ]
@@ -1381,7 +1381,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
         type= "CTRL+ALT",
         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
     };
-    key <LALT> {         [           Alt_L,          Meta_L ] };
+    key <LALT> {         [           Control_L ] };
     key <SPCE> {         [           space ] };
     key <CAPS> {         [       Meta_L ] };
     key <FK01> {
@@ -1467,7 +1467,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key <HKTG> {         [ Hiragana_Katakana ] };
     key <MUHE> {         [        Muhenkan ] };
     key <KPEN> {         [        KP_Enter ] };
-    key <RCTL> {         [       Control_R ] };
+    key <RCTL> {         [       Alt_R ] };
     key <KPDV> {
         type= "CTRL+ALT",
         symbols[Group1]= [       KP_Divide,       KP_Divide,       KP_Divide,       KP_Divide,      XF86Ungrab ]
@@ -1478,7 +1478,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <RALT> {
         type= "ONE_LEVEL",
-        symbols[Group1]= [ Alt_R ]
+        symbols[Group1]= [ Control_R ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
