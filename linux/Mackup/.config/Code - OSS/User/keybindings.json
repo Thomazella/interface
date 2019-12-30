@@ -514,5 +514,8 @@
   {
     "key": "cmd+9",
     "command": "workbench.action.moveEditorToLeftGroup"
+  },  {
+    "key": "meta+9",
+    "command": "workbench.action.moveEditorToLeftGroup"
   },
 ]

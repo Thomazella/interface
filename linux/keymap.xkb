@@ -1383,7 +1383,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <LALT> {         [           Alt_L,          Meta_L ] };
     key <SPCE> {         [           space ] };
-    key <CAPS> {         [       Alt_R ] };
+    key <CAPS> {         [       Meta_L ] };
     key <FK01> {
         type= "CTRL+ALT",
         symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
