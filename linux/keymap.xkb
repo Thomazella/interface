@@ -1478,7 +1478,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <RALT> {
         type= "ONE_LEVEL",
-        symbols[Group1]= [ Hyper_R ]
+        symbols[Group1]= [ Meta_R ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
@@ -1505,7 +1505,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key <I129> {         [      KP_Decimal,      KP_Decimal ] };
     key <HNGL> {         [          Hangul ] };
     key <HJCV> {         [    Hangul_Hanja ] };
-    key <LWIN> {         [         Hyper_L ] };
+    key <LWIN> {         [         Meta_L ] };
     key <RWIN> {         [         Super_R ] };
     key <COMP> {         [            Menu ] };
     key <STOP> {         [          Cancel ] };
