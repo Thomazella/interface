@@ -9,7 +9,7 @@ alias gdd='dd'
 alias pbcopy='xclip -selection c'
 alias gls='/usr/bin/ls'
 alias google="s -p duckduckgo"
-alias .i="cd $DOTFILE_PATH"
+alias .i="cd \$DOTFILE_PATH"
 
 #========== Generic
 alias aur='aurman'
@@ -22,7 +22,6 @@ alias sddm='sddm.service'
 alias soff='systemctl poweroff'
 alias drive='rclone'
 alias ssh='ssh-ident'
-alias root='\sudo bash -ixc "$(fc -ln -1)"'
 alias sudo='root'
 alias .s='root'
 alias pac='pacman'
