@@ -20,8 +20,17 @@ safe_source $DOTFILE_PATH/.prompt.linux.bash
 #touch $HOME/Desktop/dhfd
 
 #========== Environment
-export PATH="$HOME/bin/monero-gui:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:\
-/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/go/bin"
+export PATH="\
+$HOME/bin:\
+/usr/local/sbin:\
+/usr/local/bin:\
+/usr/bin:\
+/usr/bin/site_perl:\
+/usr/bin/vendor_perl:\
+/usr/bin/core_perl:\
+/home/linuxbrew/.linuxbrew/bin:\
+$HOME/bin/monero-gui:\
+/usr/local/go/bin"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
