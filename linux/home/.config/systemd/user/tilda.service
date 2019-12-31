@@ -1,0 +1,9 @@
+[Unit]
+Description=Tilda dropdown terminal process
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/tilda
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Loads x11 xkbcomp
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xkbcomp /home/vacation/Desktop/interface/linux/keymap.xkb $DISPLAY
+
+[Install]
+WantedBy=default.target
