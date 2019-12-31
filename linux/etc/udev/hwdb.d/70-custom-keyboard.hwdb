@@ -1,7 +1,7 @@
 evdev:input*
- KEYBOARD_KEY_70039=leftalt  # capslock
- KEYBOARD_KEY_700e0=leftmeta   # left control
- KEYBOARD_KEY_700e3=leftalt  # left windows
- KEYBOARD_KEY_700e2=leftctrl  # left alt
- KEYBOARD_KEY_700e6=rightctrl # right alt
- KEYBOARD_KEY_700e4=rightmeta # right control
+ KEYBOARD_KEY_70039=leftalt     # capslock
+ KEYBOARD_KEY_700e0=leftmeta    # left control
+ KEYBOARD_KEY_700e3=leftalt     # left windows
+ KEYBOARD_KEY_700e2=leftctrl    # left alt
+ KEYBOARD_KEY_700e6=rightctrl   # right alt
+ KEYBOARD_KEY_700e4=rightmeta   # right control
