@@ -57,5 +57,12 @@ if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
   $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
 fi
 
-systemctl --user start tilda.service
+for unit in tilda.service x11-keyboard.service; do
+  unitFile="$HOME/.config/systemd/user/$unit"
+  if [ -f "$unitFile" ]; then
+    systemctl --user start "$unit"
+  fi
+  unset unitFile
+done
+
 xset r rate 140 60
