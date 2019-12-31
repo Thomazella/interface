@@ -125,14 +125,14 @@ xkb_keycodes "evdev+aliases(qwerty)" {
     <HNGL> = 130;
     <HJCV> = 131;
     <AE13> = 132;
-    <FRNT> = 133;
+    <LWIN> = 133;
     <RWIN> = 134;
     <COMP> = 135;
     <STOP> = 136;
     <AGAI> = 137;
     <PROP> = 138;
     <UNDO> = 139;
-    <LWIN> = 140;
+    <FRNT> = 140;
     <COPY> = 141;
     <OPEN> = 142;
     <PAST> = 143;
@@ -1282,7 +1282,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
         symbols[Group1]= [    bracketright,      braceright,  guillemotright, rightdoublequotemark ]
     };
     key <RTRN> {         [          Return ] };
-    key <LCTL> {         [       Alt_L ] };
+    key <LCTL> {         [       Control_L ] };
     key <AC01> {
         type= "FOUR_LEVEL_ALPHABETIC",
         symbols[Group1]= [               a,               A,          aacute,          Aacute ]
@@ -1381,9 +1381,9 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
         type= "CTRL+ALT",
         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
     };
-    key <LALT> {         [           Control_L ] };
+    key <LALT> {         [           Alt_L,          Meta_L ] };
     key <SPCE> {         [           space ] };
-    key <CAPS> {         [       Meta_L ] };
+    key <CAPS> {         [       Caps_Lock ] };
     key <FK01> {
         type= "CTRL+ALT",
         symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
@@ -1467,7 +1467,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key <HKTG> {         [ Hiragana_Katakana ] };
     key <MUHE> {         [        Muhenkan ] };
     key <KPEN> {         [        KP_Enter ] };
-    key <RCTL> {         [       Alt_R ] };
+    key <RCTL> {         [       Control_R ] };
     key <KPDV> {
         type= "CTRL+ALT",
         symbols[Group1]= [       KP_Divide,       KP_Divide,       KP_Divide,       KP_Divide,      XF86Ungrab ]
@@ -1478,7 +1478,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     };
     key <RALT> {
         type= "ONE_LEVEL",
-        symbols[Group1]= [ Control_R ]
+        symbols[Group1]= [ ISO_Level3_Shift ]
     };
     key <LNFD> {         [        Linefeed ] };
     key <HOME> {         [            Home ] };
@@ -1505,7 +1505,7 @@ xkb_symbols "pc+us(intl-unicode)+inet(evdev)" {
     key <I129> {         [      KP_Decimal,      KP_Decimal ] };
     key <HNGL> {         [          Hangul ] };
     key <HJCV> {         [    Hangul_Hanja ] };
-    key <LWIN> {         [         Meta_L ] };
+    key <LWIN> {         [         Super_L ] };
     key <RWIN> {         [         Super_R ] };
     key <COMP> {         [            Menu ] };
     key <STOP> {         [          Cancel ] };
