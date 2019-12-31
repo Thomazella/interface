@@ -11,6 +11,8 @@ echo "
     sudo ln \${PWD}/linux/etc/udev/70-custom-keyboard.hwdb /etc/udev/hwdb.d/70-custom-keyboard.hwdb
     see this for editing the file
     https://gist.github.com/Thomazella/fcd1fac083a9c7f792c70fb49a71177c#gistcomment-3122968
+  home/.config/systemd/user
+    for name in home/.config/systemd/user/*; do echo ln "$PWD/$name" ~/.config/systemd/user/$name; done
 "
 # E: KEYBOARD_KEY_70039=leftmeta
 # E: KEYBOARD_KEY_700e0=leftalt
