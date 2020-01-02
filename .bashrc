@@ -3,7 +3,7 @@
 
 export WARN_SOURCE_FAIL="yes"
 
-safe_source(){
+safe_source() {
   if [ -f "$1" ]; then
     source "$1"
   else

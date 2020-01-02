@@ -10,43 +10,43 @@ declare SAFECOPYDIR="/Volumes/Izi"
 declare GDRIVE="$HOME/Documents/GoogleDrive/Mackup"
 
 declare -A REGULAR=(
-    # DO end paths with a trailing slash/
-    ["/EFI-Backups/"]="$BKPDIR/Bkp/_Mac/others/EFI-Backups/"
-    ["/Users/vamac/Documents/"]="$BKPDIR/Bkp/_Mac/documents/"
-    ["/Volumes/Izi/Ableton/_projects/"]="$BKPDIR/Bkp/Ableton/_projects/"
-    ["/Volumes/Izi/Ableton/Factory Packs/"]="$BKPDIR/Bkp/Ableton/Factory Packs/"
-    ["/Volumes/Izi/Ableton/User Library/"]="$BKPDIR/Bkp/Ableton/User Library/"
-    ["/Users/vamac/Pictures/2019/"]="$BKPDIR/Bkp/Pictures/2018/"
-    ["/Users/vamac/Pictures/walls/"]="$BKPDIR/Bkp/Pictures/walls/"
-    ["/Users/vamac/.ssh/"]="$BKPDIR/Bkp/_Mac/home/dot-ssh/"
-    ["/Users/vamac/.gnupg/"]="$BKPDIR/Bkp/_Mac/home/dot-gnupg/"
-    ["/Users/vamac/Code/"]="$BKPDIR/Bkp/Code/"
-    # [""]=""
-    # [""]=""
+  # DO end paths with a trailing slash/
+  ["/EFI-Backups/"]="$BKPDIR/Bkp/_Mac/others/EFI-Backups/"
+  ["/Users/vamac/Documents/"]="$BKPDIR/Bkp/_Mac/documents/"
+  ["/Volumes/Izi/Ableton/_projects/"]="$BKPDIR/Bkp/Ableton/_projects/"
+  ["/Volumes/Izi/Ableton/Factory Packs/"]="$BKPDIR/Bkp/Ableton/Factory Packs/"
+  ["/Volumes/Izi/Ableton/User Library/"]="$BKPDIR/Bkp/Ableton/User Library/"
+  ["/Users/vamac/Pictures/2019/"]="$BKPDIR/Bkp/Pictures/2018/"
+  ["/Users/vamac/Pictures/walls/"]="$BKPDIR/Bkp/Pictures/walls/"
+  ["/Users/vamac/.ssh/"]="$BKPDIR/Bkp/_Mac/home/dot-ssh/"
+  ["/Users/vamac/.gnupg/"]="$BKPDIR/Bkp/_Mac/home/dot-gnupg/"
+  ["/Users/vamac/Code/"]="$BKPDIR/Bkp/Code/"
+  # [""]=""
+  # [""]=""
 )
 
 declare -A REDUNDANT=(
-    ["/Users/vamac/Desktop/"]="$SAFECOPYDIR/bkp/Desktop/"
-    ["/Users/vamac/Downloads/"]="$SAFECOPYDIR/bkp/Downloads/"
-    ["/Users/vamac/Movies/"]="$SAFECOPYDIR/bkp/Movies/"
-    # ["/Users/vamac/VirtualBox VMs/"]="$SAFECOPYDIR/bkp/VirtualBox/"
-    # [""]=""
-    # [""]=""
+  ["/Users/vamac/Desktop/"]="$SAFECOPYDIR/bkp/Desktop/"
+  ["/Users/vamac/Downloads/"]="$SAFECOPYDIR/bkp/Downloads/"
+  ["/Users/vamac/Movies/"]="$SAFECOPYDIR/bkp/Movies/"
+  # ["/Users/vamac/VirtualBox VMs/"]="$SAFECOPYDIR/bkp/VirtualBox/"
+  # [""]=""
+  # [""]=""
 )
 
 declare -A SYNCDELETING=(
-    ["/Users/vamac/bin/"]="$BKPDIR/Bkp/_Mac/bin/"
-    ["/Users/vamac/Code/foton/sense-chat-mobile/"]="$BKPDIR/Bkp/Code/foton/sense-chat-mobile/"
-    ["/Users/vamac/Code/foton/squirrel-mobile/"]="$BKPDIR/Bkp/Code/foton/squirrel-mobile/"
-    ["/Users/vamac/Code/foton/greuv-mobile/"]="$BKPDIR/Bkp/Code/foton/greuv-mobile/"
-    # [""]=""
+  ["/Users/vamac/bin/"]="$BKPDIR/Bkp/_Mac/bin/"
+  ["/Users/vamac/Code/foton/sense-chat-mobile/"]="$BKPDIR/Bkp/Code/foton/sense-chat-mobile/"
+  ["/Users/vamac/Code/foton/squirrel-mobile/"]="$BKPDIR/Bkp/Code/foton/squirrel-mobile/"
+  ["/Users/vamac/Code/foton/greuv-mobile/"]="$BKPDIR/Bkp/Code/foton/greuv-mobile/"
+  # [""]=""
 )
 
 declare -A ZIPPING=(
-    #do NOT end file paths with a trailing slash/. It will zip contents ONLY and create a file named .tar.7z (hidden)
-    #old ff path: "/Users/Shared/5e3ouofl.default"
-    ["$HOME/Library/Application Support/Firefox/Profiles/cthdp4sx.dev-edition-default"]="$BKPDIR/Bkp/Firefox/5e3ouofl.default.tar.7z"
-    # ["/Volumes/Izi/bkp/vuzebkp"]="$BKPDIR/Bkp/_Mac/others/vuzebkp.tar.7z"a
+  #do NOT end file paths with a trailing slash/. It will zip contents ONLY and create a file named .tar.7z (hidden)
+  #old ff path: "/Users/Shared/5e3ouofl.default"
+  ["$HOME/Library/Application Support/Firefox/Profiles/cthdp4sx.dev-edition-default"]="$BKPDIR/Bkp/Firefox/5e3ouofl.default.tar.7z"
+  # ["/Volumes/Izi/bkp/vuzebkp"]="$BKPDIR/Bkp/_Mac/others/vuzebkp.tar.7z"a
 )
 
 ##--------------------  Functions --------------------##
