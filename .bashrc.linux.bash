@@ -61,11 +61,13 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export ERLANG_OPENSSL_PATH="/usr/local/opt/openssl"
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl/1.0.2t"
 
+# add ssh key to ssh agente, bypaass prompt
 if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
   eval "$(ssh-agent)" 2>/dev/null 1>&2
   $DOTFILE_PATH/.private-ssh-add.expect 2>/dev/null 1>&2
 fi
 
+# start systemd user units
 for unit in tilda.service x11-keyboard.service; do
   unitFile="$HOME/.config/systemd/user/$unit"
   if [ -f "$unitFile" ]; then
@@ -74,4 +76,8 @@ for unit in tilda.service x11-keyboard.service; do
   unset unitFile
 done
 
-xset r rate 140 60
+# fast keyboard key response rate
+if [[ ! "$(tty)" =~ /dev/tty[0-9]* ]]; then
+  # don't run when on a real tty, only graphic X11 ttys
+  xset r rate 140 60
+fi
