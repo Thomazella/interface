@@ -14,8 +14,8 @@
       "badge.background": "#141318",
       "editorPane.background": "#141318",
       "editorWidget.background": "#141318",
-      "tab.activeBackground": "#141318",
       "tab.inactiveBackground": "#141318",
+      "tab.activeBackground": "#141318",
       "titleBar.activeBackground": "#141318",
       "editorGutter.background": "#141318"
     },
@@ -233,4 +233,5 @@
     "source.fixAll.eslint": true
   },
   "explorer.confirmDelete": false,
+  "window.menuBarVisibility": "hidden",
 }
