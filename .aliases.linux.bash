@@ -11,6 +11,7 @@ alias gls='/usr/bin/ls'
 alias google="s -p duckduckgo"
 alias .i="cd \$DOTFILE_PATH"
 unalias find
+unalias stat
 
 #========== Generic
 # aur
@@ -27,8 +28,7 @@ alias drive='rclone'
 alias ssh='ssh-ident'
 alias sudo='root'
 alias .s='root'
-alias .d='dolphin . &'
-alias dol="dolphin"
+alias dol='dolphin . &'
 # pacman
 alias pac='pacman'
 alias paci='pacman --sync --info'                                                                            # -Si
