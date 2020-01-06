@@ -30,6 +30,7 @@ $HOME/bin:\
 /usr/bin/core_perl:\
 /home/linuxbrew/.linuxbrew/bin:\
 $HOME/bin/monero-gui:\
+$HOME/Desktop/bats-core/bin:\
 /usr/local/go/bin"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
@@ -68,7 +69,7 @@ if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
 fi
 
 # start systemd user units
-for unit in tilda.service x11-keyboard.service; do
+for unit in x11-keyboard.service; do
   unitFile="$HOME/.config/systemd/user/$unit"
   if [ -f "$unitFile" ]; then
     systemctl --user start "$unit"
