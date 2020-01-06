@@ -10,11 +10,14 @@ alias pbcopy='xclip -selection c'
 alias gls='/usr/bin/ls'
 alias google="s -p duckduckgo"
 alias .i="cd \$DOTFILE_PATH"
+unalias find
 
 #========== Generic
+# aur
 alias aur='aurman'
 alias aurs='aurman --aur --sync --search'
 alias aurI='aurman --sync'
+# misc
 alias sys='systemctl'
 alias lsblk='lsblk -f'
 alias desktop='sudo systemctl start sddm.service'
@@ -24,6 +27,9 @@ alias drive='rclone'
 alias ssh='ssh-ident'
 alias sudo='root'
 alias .s='root'
+alias .d='dolphin . &'
+alias dol="dolphin"
+# pacman
 alias pac='pacman'
 alias paci='pacman --sync --info'                                                                            # -Si
 alias pacl='pacman --query'                                                                                  # -Q
