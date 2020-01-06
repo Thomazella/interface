@@ -1,5 +1,5 @@
-// Place your key bindings in this file to overwrite the defaults
 [
+  // Place your key bindings in this file to overwrite the defaults
   {
     "key": "alt+tab",
     "command": "editor.action.reindentlines",
@@ -578,5 +578,18 @@
   {
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-editor.action.selectAll",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "meta+e",
+    "command": "cursorLineEnd"
+  },
+  {
+    "key": "meta+a",
+    "command": "cursorLineStart"
   }
 ]
