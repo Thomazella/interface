@@ -1,0 +1,9 @@
+[Unit]
+Description=qterminal dropdown terminal process
+
+[Service]
+Type=simple
+ExecStart=usr/bin/qterminal --drop --workdir $HOME/Desktop
+
+[Install]
+WantedBy=default.target
