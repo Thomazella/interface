@@ -82,3 +82,7 @@ if [[ ! "$(tty)" =~ /dev/tty[0-9]* ]]; then
   # don't run when on a real tty, only graphic X11 ttys
   xset r rate 140 60
 fi
+
+if [ -d "./Desktop" ]; then
+  command cd ./Desktop
+fi
