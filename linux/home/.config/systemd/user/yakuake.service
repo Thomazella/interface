@@ -1,0 +1,9 @@
+[Unit]
+Description=yakuake dropdown terminal process
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/yakuake
+
+[Install]
+WantedBy=default.target
