@@ -11,8 +11,10 @@ echo "
     sudo ln \${PWD}/linux/etc/udev/70-custom-keyboard.hwdb /etc/udev/hwdb.d/70-custom-keyboard.hwdb
     see this for editing the file
     https://gist.github.com/Thomazella/fcd1fac083a9c7f792c70fb49a71177c#gistcomment-3122968
-  home/.config/systemd/user
-    for name in home/.config/systemd/user/*; do echo ln "$PWD/$name" ~/.config/systemd/user/$name; done
-  home/.config/git-prompt.sh
+  linux/home/.config/systemd/user
+    for name in linux/home/.config/systemd/user/*; do echo ln "$PWD/$name" ~/.config/systemd/user/$name; done
+  linux/home/.config/git-prompt.sh
     source from shell, see https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  linux/home/.gnupg/gpg-agent.conf
+    ln $PWD/linux/home/.gnupg/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 "
