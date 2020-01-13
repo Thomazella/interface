@@ -2,6 +2,11 @@
 
 # Linux aliases
 
+#####################################################
+# If not running interactively, skip remaining code #
+#####################################################
+[[ $- != *i* ]] && return
+
 #========== Override macos
 alias gmv='mv'
 alias gsed='sed'

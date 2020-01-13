@@ -1,4 +1,10 @@
 #! /usr/bin/env bash
+
+#####################################################
+# If not running interactively, skip remaining code #
+#####################################################
+[[ $- != *i* ]] && return
+
 ###############
 #-------general
 ###############
@@ -108,7 +114,7 @@ alias bashaliases='code   ~/.aliases.bash'
 alias bashfunctions='code ~/.functions.bash'
 alias bashps1='code       ~/.prompt.bash'
 ###################
-#----------mistakes
+# ----------mistakes
 ###################
 alias loca='local'
 alias emcas='emacs'
