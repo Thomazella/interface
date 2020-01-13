@@ -1,0 +1,74 @@
+Android File Transfer.app
+Android Studio.app
+App Store.app
+Automator.app
+Backup and Sync.app
+Blackmagic Disk Speed Test.app
+Books.app
+Buttercup.app
+Calculator.app
+Calendar.app
+Chess.app
+Clover Configurator.app
+Contacts.app
+Dashboard.app
+Dictionary.app
+Discord.app
+EOS Studio.app
+FaceTime.app
+Figma.app
+FileZilla.app
+Firefox Developer Edition.app
+Flipper.app
+Font Book.app
+GPG Keychain.app
+Google Chrome.app
+HWMonitor.app
+Hackintool.app
+Home.app
+Howler Timer.app
+Image Capture.app
+Kap.app
+Key Codes.app
+Launchpad.app
+MaciASL.app
+Mail.app
+Maps.app
+Messages.app
+Mission Control.app
+News.app
+Notes.app
+Phew.app
+Photo Booth.app
+Photos.app
+Postgres.app
+Postico.app
+Postman.app
+Preview.app
+ProtonVPN.app
+QuickTime Player.app
+React Native Debugger.app
+Reminders.app
+Robo 3T.app
+Safari.app
+Siri.app
+Slack.app
+Spotify.app
+Stickies.app
+Stocks.app
+System Preferences.app
+TextEdit.app
+Time Machine.app
+Uninstaller for Vuze.app
+Utilities
+VLC.app
+Visual Studio Code.app
+VoiceMemos.app
+WebStorm.app
+Xcode.app
+Xcode10.app
+iTerm.app
+iTunes.app
+qBittorrent.app
+scatter.app
+zoom.us.app

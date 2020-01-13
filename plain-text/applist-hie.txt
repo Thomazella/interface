@@ -1,0 +1,74 @@
+Ableton Live 10 Suite.app
+Adobe Audition CC 2017
+Adobe Creative Cloud
+Adobe Illustrator CC 2015
+Adobe InDesign CC 2015
+Adobe Photoshop CC 2017
+Adobe Photoshop Lightroom 5.app
+Android File Transfer.app
+App Store.app
+Automator.app
+Backup and Sync.app
+Buttercup.app
+Calculator.app
+Calendar.app
+Chess.app
+Chromaphone 2.app
+Clover Configurator.app
+Contacts.app
+DVD Player.app
+Dash.app
+Dashboard.app
+Dictionary.app
+EFI Mounter v3.app
+FaceTime.app
+Figma.app
+FirefoxDeveloperEdition.app
+Font Book.app
+GG Audio
+GPG Keychain.app
+Google Chrome.app
+HWMonitor.app
+IORegistryExplorer.app
+Image Capture.app
+Install macOS Mojave.app
+Kap.app
+KeePassXC.app
+Launchpad.app
+MaciASL.app
+Mail.app
+Maps.app
+Messages.app
+Mission Control.app
+Native Instruments
+Notes.app
+Phew.app
+Photo Booth.app
+Photos.app
+Postman.app
+Preview.app
+QuickTime Player.app
+Reminders.app
+Safari.app
+Siri.app
+Slack.app
+Spotify.app
+Steam.app
+Stickies.app
+Sublime Merge.app
+System Preferences.app
+TextEdit.app
+Time Machine.app
+Ultra Analog VA-2.app
+Uninstaller for Vuze.app
+Utilities
+VLC.app
+Visual Studio Code.app
+Vuze.app
+Xcode.app
+iBooks.app
+iTerm.app
+iTunes.app
+macOS Mojave Patcher.app
+qBittorrent.app
+zoom.us.app
