@@ -1,5 +1,12 @@
 .private*
 .wakatime*
 linux/Mackup/.emacs*
+.emacs*/*
+.atom/*
 linux/Mackup/.atom*
 trustdb*
+.npm*
+hub
+.ssh
+Library/*
+Backup-codes*
