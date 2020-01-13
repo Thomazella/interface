@@ -1004,3 +1004,12 @@ gss() {
     ls
   fi
 }
+
+# get a certain lines from git history, tac, copy
+gloltaccp() {
+  if [ "$#" == "0" ]; then
+    echo "pass number of lines to copy from git log"
+    return
+  fi
+  eval "glol | head -$1 | tac | pbcopy"
+}
