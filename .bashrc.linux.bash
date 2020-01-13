@@ -14,10 +14,8 @@ safe_source $DOTFILE_PATH/.functions.bash
 safe_source $DOTFILE_PATH/.functions.linux.bash
 safe_source $DOTFILE_PATH/.private.bash
 safe_source $DOTFILE_PATH/.prompt.linux.bash
-
-#========== Keyboard
-#xmodmap $HOME/.xmodmap
-#touch $HOME/Desktop/dhfd
+safe_source $DOTFILE_PATH/linux/home/.config/git-prompt.sh
+safe_source /usr/share/bash-completion/bash_completion
 
 #========== Environment
 export PATH="\

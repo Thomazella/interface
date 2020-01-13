@@ -4,10 +4,6 @@
 
 #========== Override macos
 
-__git_ps1() {
-  true
-}
-
 #- - - - - - - - - - -
 
 goo() {

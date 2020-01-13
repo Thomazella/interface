@@ -13,10 +13,6 @@ echo "
     https://gist.github.com/Thomazella/fcd1fac083a9c7f792c70fb49a71177c#gistcomment-3122968
   home/.config/systemd/user
     for name in home/.config/systemd/user/*; do echo ln "$PWD/$name" ~/.config/systemd/user/$name; done
+  home/.config/git-prompt.sh
+    source from shell, see https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 "
-# E: KEYBOARD_KEY_70039=leftmeta
-# E: KEYBOARD_KEY_700e0=leftalt
-# E: KEYBOARD_KEY_700e2=leftctrl
-# E: KEYBOARD_KEY_700e3=leftmeta
-# E: KEYBOARD_KEY_700e4=rightalt
-# E: KEYBOARD_KEY_700e6=rightctrl
