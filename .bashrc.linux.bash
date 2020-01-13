@@ -7,6 +7,7 @@
 
 DOTFILE_PATH="/home/vacation/Desktop/interface"
 
+# order matters here
 safe_source $DOTFILE_PATH/.bashrc.bash
 safe_source $DOTFILE_PATH/.aliases.bash
 safe_source $DOTFILE_PATH/.aliases.linux.bash
