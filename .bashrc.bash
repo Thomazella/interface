@@ -8,9 +8,9 @@ tput init
 GIT_PS1_SHOWDIRTYSTATE="true"
 GIT_PS1_SHOWSTASHSTATE="true"
 GIT_PS1_SHOWUNTRACKEDFILES="true"
-GIT_PS1_SHOWUPSTREAM="auto"
+# GIT_PS1_SHOWUPSTREAM="auto"
 # You can further control behaviour by setting GIT_PS1_SHOWUPSTREAM to a space-separated list of values: verbose name legacy git svn
-# GIT_PS1_SHOWUPSTREAM="verbose name git"
+GIT_PS1_SHOWUPSTREAM="verbose git"
 GIT_PS1_STATESEPARATOR=""
 # If you would like to see more information about the identity of commits checked out as a detached HEAD, set GIT_PS1_DESCRIBE_STYLE to one of these values: contains branch describe tag default
 GIT_PS1_DESCRIBE_STYLE="branch"
