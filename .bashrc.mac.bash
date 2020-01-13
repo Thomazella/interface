@@ -37,11 +37,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 safe_source /usr/local/opt/asdf/asdf.sh
 
 #========== Late sourcing
-if [ -f ~/.prompt.bash ]; then
-  safe_source ~/.prompt.bash
-else
-  export PS1="\\n\\w\\n\$ "
-fi
+safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.prompt.mac.bash"
 safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.aliases.bash"
 safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.private.bash"
 safe_source "/Users/vamac/Documents/GoogleDrive/Mackup/.functions.bash"
