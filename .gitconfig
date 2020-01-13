@@ -7,7 +7,7 @@
 	compression = -1
 	excludesfile = /Users/vamac/.gitignore_global
 [commit]
-#	gpgSign = true
+	gpgSign = true
 #	template = /Users/vamac/.stCommitMsg
 [fetch]
 	prune = true
