@@ -9,18 +9,6 @@ random256Color() {
   fi
 }
 
-glyphGitDev() {
-  echo -ne \\uf7a1
-}
-
-glyphGitBranch() {
-  echo -ne \\ue725
-}
-
-glyphGitCat() {
-  echo -ne \\uf61a
-}
-
 getTermColumns() {
   if [ ! "$COLUMNS" ]; then
     if command -v tput 2>/dev/null 1>&2; then
@@ -70,5 +58,5 @@ makePS1() {
 PS1=$(makePS1)
 export PS1
 # shellcheck disable=2089 disable=2090
-PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$auxiliarColor$(glyphGitBranch)  $end$mainColor$underline%s$end' && chpwd"
+PROMPT_COMMAND="__git_ps1 '$(makePS1 preGit)' '$(makePS1 postGit)' '$mainColor$underline%s$end' && chpwd"
 export PROMPT_COMMAND
