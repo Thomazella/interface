@@ -292,6 +292,7 @@ alias lgs="SKIPADD=1 && lg"
 alias lgw="WIPCOMMIT=1 && lg"
 alias caf="caffeinate"
 alias g-="git checkout -"
+alias gfp="git fetch --all --prune && git pull"
 ###################
 #------------dev
 ###################
