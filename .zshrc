@@ -19,14 +19,6 @@ compinit
 
 WARN_SOURCE="no"
 
-safe_source(){
-  if [ -f "$1" ]; then
-    source "$1"
-  else
-    [ "$WARN_SOURCE" == "yes" ] && echo "$1" not found to source
-  fi
-}
-
 #========== Bash stuff ==========#
 
 #it's recommended by a man page to set this here for better compatibility I guess
