@@ -70,7 +70,7 @@ if [ ! "$SSH_AUTH_SOCK" ] && [ -f $DOTFILE_PATH/.private-ssh-add.expect ]; then
 fi
 
 # start systemd user units
-for unit in x11-keyboard.service yakuake.service; do
+for unit in x11-keyboard.service guake.service; do
   unitFile="$HOME/.config/systemd/user/$unit"
   if [ -f "$unitFile" ]; then
     systemctl --user start "$unit"
