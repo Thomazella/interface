@@ -27,6 +27,8 @@ $HOME/bin:\
 /home/linuxbrew/.linuxbrew/bin:\
 $HOME/bin/monero-gui:\
 $HOME/Desktop/bats-core/bin:\
+$HOME/Desktop/bats-core/libexec/bats-core:\
+$HOME/rn-debugger:\
 /usr/local/go/bin"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
