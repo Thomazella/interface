@@ -176,7 +176,7 @@ ShowIconsOnPushButtons=true
 SingleClick=false
 StartDragDist=4
 StartDragTime=500
-WheelScrollLines=5
+WheelScrollLines=8
 contrast=4
 widgetStyle=breeze
 

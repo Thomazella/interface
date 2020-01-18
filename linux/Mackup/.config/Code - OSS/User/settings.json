@@ -234,4 +234,5 @@
   },
   "explorer.confirmDelete": false,
   "window.menuBarVisibility": "hidden",
+  "editor.mouseWheelScrollSensitivity": 3,
 }
