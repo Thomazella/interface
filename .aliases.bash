@@ -54,6 +54,8 @@ alias his='hub issue'
 alias cleoskylin="cleos -u http://kylin.fn.eosbixin.com"
 alias emulator="\$HOME/Library/Android/sdk/emulator/emulator"
 alias find="gfind"
+alias t="cat"
+alias l="less"
 ################
 #-------. stuff
 ################
