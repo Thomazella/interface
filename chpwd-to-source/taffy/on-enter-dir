@@ -1,4 +1,4 @@
-unalias gcom gmom gppr
+# unalias gcom gmom gppr
 alias gcom='git fetch --all --prune && git checkout v2'
 alias gmom='git fetch --all --prune && git merge -q origin/v2'
 alias gppr='gpsup && hub pull-request -b v2 --browse --assign thomazella'

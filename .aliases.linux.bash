@@ -17,6 +17,8 @@ alias google="s -p duckduckgo"
 alias .i="cd \$DOTFILE_PATH"
 unalias find
 unalias stat
+unalias emulator
+alias acceptAllLicenses="yes | sdkmanager --licenses"
 
 #========== Generic
 # aur

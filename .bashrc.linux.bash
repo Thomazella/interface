@@ -16,6 +16,13 @@ safe_source $DOTFILE_PATH/linux/home/.config/git-prompt.sh
 safe_source /usr/share/bash-completion/bash_completion
 
 #========== Environment
+# android SDK
+# gradle needs this to find SDK. Opening android studio once fixes.
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
+# custom var
+export ANDROID_BUILD_TOOLS_VER="29.0.2"
+
 export PATH="\
 $HOME/bin:\
 /usr/local/sbin:\
@@ -29,14 +36,14 @@ $HOME/bin/monero-gui:\
 $HOME/Desktop/bats-core/bin:\
 $HOME/Desktop/bats-core/libexec/bats-core:\
 $HOME/rn-debugger:\
+$ANDROID_HOME/tools:\
+$ANDROID_HOME/platform-tools:\
+$ANDROID_HOME/tools/bin:\
+$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_VER:\
 /usr/local/go/bin"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
-# android SDK
-# gradle needs this to find SDK. Opening android studio once fixes.
-# export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-# export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # generic stuff
 # export PATH="$ANDROID_SDK_ROOT/build-tools/28.0.0/:$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
