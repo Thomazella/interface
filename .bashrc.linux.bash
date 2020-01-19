@@ -44,7 +44,6 @@ $ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_VER:\
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
-
 # generic stuff
 # export PATH="$ANDROID_SDK_ROOT/build-tools/28.0.0/:$HOME/.asdf/installs/elixir/1.9.2/bin:/usr/local/opt/libxslt/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/local/sbin:/usr/sbin:/opt/X11/bin:$HOME/Documents/GoogleDrive/Mackup:/usr/local/opt/go/libexec/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/util-linux/bin:/usr/local/opt/ruby/bin:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
 # export MANPATH="/usr/local/opt/erlang/lib/erlang/man:$MANPATH"
@@ -100,3 +99,8 @@ fi
 
 # gpg agent
 export GPGKEY=D600E88A0C5FE062
+
+#tmux
+[ ! "$TMUX" ] && {
+  tmux attach || tmux new-session
+}
